@@ -1,0 +1,2406 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>TQFR Reports: WI 2014-15 &mdash; CS 002</title>
+  <link rel="stylesheet" href="/res/tqfr/css/survey.css" type="text/css" media="all">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="/res/tqfr/js/selectivizr-min.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+  <div id="before_content"></div>
+  
+  <div id="content" align="center">
+    <table id="util_search">
+      <tr>
+      <td><a href="/tqfr/reports/list_surveys">Survey List</a></td>
+      <td id="content-top-spacer">&nbsp;</td>
+      <td><a href='mailto:tqfr@caltech.edu'><font color="red">Feedback</font></a></td>
+      <td><a href='javascript:window.close();'><font color="red">Exit</font></a></td>
+      <td><a href='/cas/logout'><font color="red">Logout All</font></a></td>
+      </tr>
+    </table>
+    <div id="search">
+      <form id="search-form" name="search-form" action="/tqfr/reports/search" method="POST">
+        <input class="text" id="search" name="search" type="text" value="Search" />
+        <input type="submit" id="search-submit" value="Go" />
+      </form>
+    </div>
+    
+    <div id="surveySection">
+      <div id="MinHeightDiv">&nbsp;</div>
+      <div class="train">
+        <a href="/tqfr/reports/list_surveys">All Surveys</a>
+        &gt; <a href="/tqfr/reports/list_divisions?survey_id=20&term_id=463">WI 2014-15</a>
+        &gt; <a href="/tqfr/reports/list_departments?survey_id=20&term_id=463&division_id=80425">EAS</a>
+        &gt; <a href="/tqfr/reports/list_tracks?survey_id=20&term_id=463&division_id=80425&department_id=117">Computer Science</a>
+      </div>
+      
+      
+
+
+
+
+<h1 class="survey_title clearfix">WI 2014-15 &mdash; CS 002</h1>
+<h1 class="offering_title">Introduction to Programming Methods</h1>
+
+<h2 class="survey_report">Response Rate</h2>
+<table class="tablediv">
+  <tr class="header">
+    <th>&nbsp;</th>
+    <th class="celldiv">Total Responses</th>
+    <th class="celldiv">Total Enrolled</th>
+  </tr>
+  <tr>
+    <td class="celldiv">Course</td>
+    <td class="celldiv">47</td>
+    <td class="celldiv">122</td>
+  </tr>
+</table>
+
+  <h2 class="survey_report">Reason For Taking Course</h2>
+  <table class="tablediv special_highlight">
+    <tr class="header">
+      <th class="questiondivshort">&nbsp;</th>
+      <th class="celldiv">Option/Minor</th>
+      <th class="celldiv">Core</th>
+      <th class="celldiv">Reputation</th>
+      <th class="celldiv">Interest</th>
+      <th class="celldiv">Other</th>
+      <th class="celldiv">Not Answered</th>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Course Average</td>
+      <td class="celldiv">74%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">23%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Department Average</td>
+      <td class="celldiv">67%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">27%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Division Average</td>
+      <td class="celldiv">52%</td>
+      <td class="celldiv">19%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">26%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Survey Average</td>
+      <td class="celldiv">35%</td>
+      <td class="celldiv">35%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">26%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+  </table>
+  <h2 class="survey_report">Was The Amount Of Work Required Higher Or Lower Than The Units Listed In The Catalog?</h2>
+  <table class="tablediv special_highlight">
+    <tr class="header">
+      <th class="questiondivshort">&nbsp;</th>
+      <th class="celldiv">Noticeably High</th>
+      <th class="celldiv">Somewhat High</th>
+      <th class="celldiv">About Right</th>
+      <th class="celldiv">Somewhat Low</th>
+      <th class="celldiv">Noticeably Low</th>
+      <th class="celldiv">Not Answered</th>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Course Average</td>
+      <td class="celldiv">34%</td>
+      <td class="celldiv">29%</td>
+      <td class="celldiv">34%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Department Average</td>
+      <td class="celldiv">12%</td>
+      <td class="celldiv">37%</td>
+      <td class="celldiv">43%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Division Average</td>
+      <td class="celldiv">11%</td>
+      <td class="celldiv">21%</td>
+      <td class="celldiv">57%</td>
+      <td class="celldiv">7%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Survey Average</td>
+      <td class="celldiv">7%</td>
+      <td class="celldiv">17%</td>
+      <td class="celldiv">62%</td>
+      <td class="celldiv">9%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+  </table>
+  <h2 class="survey_report">% Of Lectures Attended</h2>
+  <table class="tablediv special_highlight">
+    <tr class="header">
+      <th class="questiondivshort">&nbsp;</th>
+      <th class="celldiv">100%</th>
+      <th class="celldiv">90%</th>
+      <th class="celldiv">80%</th>
+      <th class="celldiv">70%</th>
+      <th class="celldiv">60%</th>
+      <th class="celldiv">50%</th>
+      <th class="celldiv">40%</th>
+      <th class="celldiv">30%</th>
+      <th class="celldiv">20%</th>
+      <th class="celldiv">10%</th>
+      <th class="celldiv">0%</th>
+      <th class="celldiv">Not Answered</th>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Course Average</td>
+      <td class="celldiv">14%</td>
+      <td class="celldiv">8%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">10%</td>
+      <td class="celldiv">4%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">23%</td>
+      <td class="celldiv">14%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Department Average</td>
+      <td class="celldiv">19%</td>
+      <td class="celldiv">9%</td>
+      <td class="celldiv">10%</td>
+      <td class="celldiv">7%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">8%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">12%</td>
+      <td class="celldiv">10%</td>
+      <td class="celldiv">1%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Division Average</td>
+      <td class="celldiv">40%</td>
+      <td class="celldiv">18%</td>
+      <td class="celldiv">7%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">4%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">1%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Survey Average</td>
+      <td class="celldiv">43%</td>
+      <td class="celldiv">19%</td>
+      <td class="celldiv">8%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">4%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">3%</td>
+      <td class="celldiv">1%</td>
+    </tr>
+  </table>
+  <h2 class="survey_report">Expected Grade</h2>
+  <table class="tablediv special_highlight">
+    <tr class="header">
+      <th class="questiondivshort">&nbsp;</th>
+      <th class="celldiv">A</th>
+      <th class="celldiv">B</th>
+      <th class="celldiv">C</th>
+      <th class="celldiv">D</th>
+      <th class="celldiv">E</th>
+      <th class="celldiv">F</th>
+      <th class="celldiv">Pass</th>
+      <th class="celldiv">Fail</th>
+      <th class="celldiv">Not Answered</th>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Course Average</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">100%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Department Average</td>
+      <td class="celldiv">28%</td>
+      <td class="celldiv">11%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">57%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Division Average</td>
+      <td class="celldiv">45%</td>
+      <td class="celldiv">20%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">30%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">1%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Survey Average</td>
+      <td class="celldiv">38%</td>
+      <td class="celldiv">16%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">42%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">1%</td>
+    </tr>
+  </table>
+  <h2 class="survey_report">Hours/Week Spent On Coursework Outside Of Class</h2>
+  <table class="tablediv special_highlight">
+    <tr class="header">
+      <th class="questiondivshort">&nbsp;</th>
+      <th class="celldiv">1-3</th>
+      <th class="celldiv">4-6</th>
+      <th class="celldiv">7-9</th>
+      <th class="celldiv">10-12</th>
+      <th class="celldiv">13-15</th>
+      <th class="celldiv">16-19</th>
+      <th class="celldiv">20-23</th>
+      <th class="celldiv">24+</th>
+      <th class="celldiv">Not Answered</th>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Course Average</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">19%</td>
+      <td class="celldiv">36%</td>
+      <td class="celldiv">21%</td>
+      <td class="celldiv">10%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Department Average</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">26%</td>
+      <td class="celldiv">34%</td>
+      <td class="celldiv">22%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Division Average</td>
+      <td class="celldiv">15%</td>
+      <td class="celldiv">25%</td>
+      <td class="celldiv">27%</td>
+      <td class="celldiv">17%</td>
+      <td class="celldiv">4%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">3%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Survey Average</td>
+      <td class="celldiv">19%</td>
+      <td class="celldiv">38%</td>
+      <td class="celldiv">23%</td>
+      <td class="celldiv">10%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">2%</td>
+    </tr>
+  </table>
+  <h2 class="survey_report">% Of Homework Completed</h2>
+  <table class="tablediv special_highlight">
+    <tr class="header">
+      <th class="questiondivshort">&nbsp;</th>
+      <th class="celldiv">100%</th>
+      <th class="celldiv">90%</th>
+      <th class="celldiv">80%</th>
+      <th class="celldiv">70%</th>
+      <th class="celldiv">60%</th>
+      <th class="celldiv">50%</th>
+      <th class="celldiv">40%</th>
+      <th class="celldiv">30%</th>
+      <th class="celldiv">20%</th>
+      <th class="celldiv">10%</th>
+      <th class="celldiv">0%</th>
+      <th class="celldiv">Not Answered</th>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Course Average</td>
+      <td class="celldiv">89%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Department Average</td>
+      <td class="celldiv">85%</td>
+      <td class="celldiv">7%</td>
+      <td class="celldiv">5%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Division Average</td>
+      <td class="celldiv">79%</td>
+      <td class="celldiv">10%</td>
+      <td class="celldiv">4%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">3%</td>
+    </tr>
+    
+    <tr>
+      <td class="questiondiv">Survey Average</td>
+      <td class="celldiv">85%</td>
+      <td class="celldiv">6%</td>
+      <td class="celldiv">2%</td>
+      <td class="celldiv">1%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">0%</td>
+      <td class="celldiv">2%</td>
+    </tr>
+  </table>
+
+  <h2 class="survey_report">Course Section: CS 002</h2>
+    <h3 class="survey_report">Overall Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">The quality of the course content</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,19,15,1,2,0" data-total="45">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.67</strong> &plusmn; 0.94</td>
+        <td class="celldiv">4.24</td>
+        <td class="celldiv">4.12</td>
+        <td class="celldiv">4.15</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Instructor Section: Alan Barr</h2>
+    <h3 class="survey_report">Overall Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">The instructor's overall teaching</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,9,5,0,1,26" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.56</strong> &plusmn; 0.86</td>
+        <td class="celldiv">4.26</td>
+        <td class="celldiv">4.09</td>
+        <td class="celldiv">4.10</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Organization/Clarity</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Set out and met clear objectives announced for the course</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="5,9,3,2,1,22" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.75</strong> &plusmn; 1.09</td>
+        <td class="celldiv">4.28</td>
+        <td class="celldiv">4.18</td>
+        <td class="celldiv">4.17</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Displayed thorough knowledge of course material</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="9,7,2,1,1,22" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.10</strong> &plusmn; 1.09</td>
+        <td class="celldiv">4.56</td>
+        <td class="celldiv">4.49</td>
+        <td class="celldiv">4.51</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Explained concepts clearly</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="7,6,3,2,0,23" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 1.00</td>
+        <td class="celldiv">4.28</td>
+        <td class="celldiv">4.09</td>
+        <td class="celldiv">4.05</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Distinguished between more important and less important topics</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,7,6,2,1,22" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.55</strong> &plusmn; 1.07</td>
+        <td class="celldiv">4.08</td>
+        <td class="celldiv">3.95</td>
+        <td class="celldiv">3.90</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material at an appropriate pace</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,8,6,3,1,22" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.35</strong> &plusmn; 1.01</td>
+        <td class="celldiv">4.00</td>
+        <td class="celldiv">3.97</td>
+        <td class="celldiv">4.00</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Ability to Engage and Challenge Students Intellectually</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Emphasized conceptual understanding and/or critical thinking</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="7,8,5,0,1,21" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.95</strong> &plusmn; 1.00</td>
+        <td class="celldiv">4.34</td>
+        <td class="celldiv">4.20</td>
+        <td class="celldiv">4.20</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Related course topics to one another</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,8,5,2,1,22" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.60</strong> &plusmn; 1.07</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.23</td>
+        <td class="celldiv">4.22</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Interaction with Students</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Demonstrated concern about whether students were learning</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,9,4,3,2,20" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.45</strong> &plusmn; 1.20</td>
+        <td class="celldiv">4.27</td>
+        <td class="celldiv">4.20</td>
+        <td class="celldiv">4.24</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Inspired and motivated student interest in the course content</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="3,9,4,3,0,22" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.63</strong> &plusmn; 0.93</td>
+        <td class="celldiv">4.27</td>
+        <td class="celldiv">4.19</td>
+        <td class="celldiv">4.17</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was available for consultation outside of class</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="3,6,3,1,0,28" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.85</strong> &plusmn; 0.86</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.25</td>
+        <td class="celldiv">4.27</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Course Organization, Content, and Evaluation</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Selected course content that was valuable and worth learning</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="5,13,4,0,1,18" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.91</strong> &plusmn; 0.88</td>
+        <td class="celldiv">4.29</td>
+        <td class="celldiv">4.21</td>
+        <td class="celldiv">4.20</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Organized course topics in a coherent fashion</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,10,6,2,1,18" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.61</strong> &plusmn; 1.01</td>
+        <td class="celldiv">4.22</td>
+        <td class="celldiv">4.13</td>
+        <td class="celldiv">4.11</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Chose assignments that solidified understanding</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,13,3,3,0,18" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.78</strong> &plusmn; 0.88</td>
+        <td class="celldiv">4.11</td>
+        <td class="celldiv">4.10</td>
+        <td class="celldiv">4.08</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Explained clearly how students would be evaluated</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,9,6,0,0,18" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.09</strong> &plusmn; 0.78</td>
+        <td class="celldiv">4.20</td>
+        <td class="celldiv">4.17</td>
+        <td class="celldiv">4.16</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Designed and used fair grading procedures</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="7,9,5,2,0,18" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.91</strong> &plusmn; 0.93</td>
+        <td class="celldiv">4.14</td>
+        <td class="celldiv">4.16</td>
+        <td class="celldiv">4.16</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Gave tests and quizzes that accurately reflected material taught</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,9,1,0,0,29" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.08</strong> &plusmn; 0.49</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.16</td>
+        <td class="celldiv">4.09</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Instructor Section: Mathieu Desbrun</h2>
+    <h3 class="survey_report">Overall Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">The instructor's overall teaching</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="10,15,7,0,0,10" data-total="42">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.09</strong> &plusmn; 0.72</td>
+        <td class="celldiv">4.26</td>
+        <td class="celldiv">4.09</td>
+        <td class="celldiv">4.10</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Organization/Clarity</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Set out and met clear objectives announced for the course</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="10,17,5,1,0,8" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.09</strong> &plusmn; 0.75</td>
+        <td class="celldiv">4.28</td>
+        <td class="celldiv">4.18</td>
+        <td class="celldiv">4.17</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Displayed thorough knowledge of course material</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="15,13,4,0,0,9" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.34</strong> &plusmn; 0.69</td>
+        <td class="celldiv">4.56</td>
+        <td class="celldiv">4.49</td>
+        <td class="celldiv">4.51</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Explained concepts clearly</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="13,13,6,1,0,8" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.15</strong> &plusmn; 0.82</td>
+        <td class="celldiv">4.28</td>
+        <td class="celldiv">4.09</td>
+        <td class="celldiv">4.05</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Distinguished between more important and less important topics</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,17,5,2,1,8" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.88</strong> &plusmn; 0.95</td>
+        <td class="celldiv">4.08</td>
+        <td class="celldiv">3.95</td>
+        <td class="celldiv">3.90</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material at an appropriate pace</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,12,9,5,0,7" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.68</strong> &plusmn; 0.99</td>
+        <td class="celldiv">4.00</td>
+        <td class="celldiv">3.97</td>
+        <td class="celldiv">4.00</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Ability to Engage and Challenge Students Intellectually</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Emphasized conceptual understanding and/or critical thinking</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="10,16,5,1,0,8" data-total="40">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.09</strong> &plusmn; 0.76</td>
+        <td class="celldiv">4.34</td>
+        <td class="celldiv">4.20</td>
+        <td class="celldiv">4.20</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Related course topics to one another</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="9,14,6,2,1,8" data-total="40">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.88</strong> &plusmn; 0.99</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.23</td>
+        <td class="celldiv">4.22</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Interaction with Students</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Demonstrated concern about whether students were learning</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="10,10,7,3,0,10" data-total="40">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.90</strong> &plusmn; 0.98</td>
+        <td class="celldiv">4.27</td>
+        <td class="celldiv">4.20</td>
+        <td class="celldiv">4.24</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Inspired and motivated student interest in the course content</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,15,6,3,0,10" data-total="40">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.80</strong> &plusmn; 0.87</td>
+        <td class="celldiv">4.27</td>
+        <td class="celldiv">4.19</td>
+        <td class="celldiv">4.17</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was available for consultation outside of class</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="5,9,3,2,1,19" data-total="39">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.75</strong> &plusmn; 1.09</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.25</td>
+        <td class="celldiv">4.27</td>
+      </tr>
+    </table>
+    <h3 class="survey_report">Course Organization, Content, and Evaluation</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Selected course content that was valuable and worth learning</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="12,15,7,0,0,7" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.15</strong> &plusmn; 0.73</td>
+        <td class="celldiv">4.29</td>
+        <td class="celldiv">4.21</td>
+        <td class="celldiv">4.20</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Organized course topics in a coherent fashion</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="10,14,9,2,0,6" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.91</strong> &plusmn; 0.87</td>
+        <td class="celldiv">4.22</td>
+        <td class="celldiv">4.13</td>
+        <td class="celldiv">4.11</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Chose assignments that solidified understanding</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="11,15,6,2,1,6" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.94</strong> &plusmn; 0.98</td>
+        <td class="celldiv">4.11</td>
+        <td class="celldiv">4.10</td>
+        <td class="celldiv">4.08</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Explained clearly how students would be evaluated</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="14,12,7,2,0,6" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.09</strong> &plusmn; 0.91</td>
+        <td class="celldiv">4.20</td>
+        <td class="celldiv">4.17</td>
+        <td class="celldiv">4.16</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Designed and used fair grading procedures</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="11,13,5,4,0,8" data-total="41">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.94</strong> &plusmn; 0.98</td>
+        <td class="celldiv">4.14</td>
+        <td class="celldiv">4.16</td>
+        <td class="celldiv">4.16</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Gave tests and quizzes that accurately reflected material taught</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,9,2,1,0,23" data-total="39">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.79</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.16</td>
+        <td class="celldiv">4.09</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Lab Integration: CS 002</h2>
+    <h3 class="survey_report">Section/Lab Integration</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Section or lab was well integrated into course structure</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,14,8,0,0,12" data-total="38">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.85</strong> &plusmn; 0.66</td>
+        <td class="celldiv">4.06</td>
+        <td class="celldiv">4.12</td>
+        <td class="celldiv">4.24</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Ellen Price</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,3,0,0,0,1" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,2,2,0,0,0" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.40</strong> &plusmn; 0.80</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="5,3,1,0,0,1" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.44</strong> &plusmn; 0.68</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="5,3,0,0,0,2" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.62</strong> &plusmn; 0.48</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="5,2,0,1,0,2" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.38</strong> &plusmn; 0.99</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Jeffrey An</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,1,1,0,0,0" data-total="8">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.62</strong> &plusmn; 0.70</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,1,0,1,0,0" data-total="8">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 1.00</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,2,0,0,0,0" data-total="8">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.75</strong> &plusmn; 0.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,2,0,0,0,0" data-total="8">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.75</strong> &plusmn; 0.43</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="6,1,1,0,0,0" data-total="8">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.62</strong> &plusmn; 0.70</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Rahul Bachal</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,1,0,0,0,0" data-total="5">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.80</strong> &plusmn; 0.40</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="4,0,1,0,0,0" data-total="5">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.60</strong> &plusmn; 0.80</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="3,1,0,1,0,0" data-total="5">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.20</strong> &plusmn; 1.17</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="3,0,2,0,0,0" data-total="5">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.20</strong> &plusmn; 0.98</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="3,0,0,1,0,1" data-total="5">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.25</strong> &plusmn; 1.30</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Solomon Chang</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Cody Han</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,1,0,0,0,1" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.89</strong> &plusmn; 0.31</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="9,1,0,0,0,0" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.90</strong> &plusmn; 0.30</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,1,1,0,0,0" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.70</strong> &plusmn; 0.64</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="7,1,1,0,0,1" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.67</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="8,1,1,0,0,0" data-total="10">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.70</strong> &plusmn; 0.64</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Dae Hyun Kim</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Brian Kubisiak</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,0" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,1,0,0,0,1" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 0.50</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,1,0,0,0,1" data-total="3">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 0.50</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Jeong Joon Park</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,0,0,0,1,0" data-total="2">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.00</strong> &plusmn; 2.00</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,0,0,0,1,0" data-total="2">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.00</strong> &plusmn; 2.00</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,0,0,0,1,0" data-total="2">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.00</strong> &plusmn; 2.00</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,0,0,1,0,0" data-total="2">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.50</strong> &plusmn; 1.50</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,0,0,1,0,0" data-total="2">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>3.50</strong> &plusmn; 1.50</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Jerry Zhang</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,2,0,0,0,0" data-total="4">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 0.50</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,2,0,0,0,0" data-total="4">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 0.50</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,1,0,0,0,1" data-total="4">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.67</strong> &plusmn; 0.47</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="1,1,0,0,0,2" data-total="4">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 0.50</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="2,2,0,0,0,0" data-total="4">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.50</strong> &plusmn; 0.50</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+  <h2 class="survey_report">Teaching Assistant Section: Taokun Zheng</h2>
+    <h3 class="survey_report">Teaching Assistant Ratings</h3>
+    <table class="tablediv score_highlight">
+    <tr class="rowdiv">
+      <td class="questiondiv">
+      <td class="celldivgraph">&nbsp;</td>
+      <td class="headerdivlong">Score</td>
+      <td class="headerdiv">Dept.</td>
+      <td class="headerdiv">Div.</td>
+      <td class="headerdiv">Caltech</td>
+    </tr>
+      <tr>
+        <td class="questiondiv">Provided helpful comments on assignments, papers, exams</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.36</td>
+        <td class="celldiv">4.32</td>
+        <td class="celldiv">4.33</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Answered questions clearly and concisely</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.31</td>
+        <td class="celldiv">4.34</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Was well prepared for section, office hours or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+        <td class="celldiv">4.44</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Presented material clearly in section or lab</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.43</td>
+        <td class="celldiv">4.44</td>
+        <td class="celldiv">4.42</td>
+      </tr>
+      <tr>
+        <td class="questiondiv">Overall teaching effectiveness</td>
+        <td class="celldiv">
+          <div class="report_graph" data-values="0,1,0,0,0,0" data-total="1">
+            <img class="c0" src="/res/tqfr/img/Excellent.png" />
+            <img class="c1" src="/res/tqfr/img/Very Good.png" />
+            <img class="c2" src="/res/tqfr/img/Good.png" />
+            <img class="c3" src="/res/tqfr/img/Fair.png" />
+            <img class="c4" src="/res/tqfr/img/Poor.png" />
+            <img class="c5" src="/res/tqfr/img/NA.png" />
+          </div>
+        </td>
+        <td class="celldiv"><strong>4.00</strong> &plusmn; 0.00</td>
+        <td class="celldiv">4.33</td>
+        <td class="celldiv">4.35</td>
+        <td class="celldiv">4.35</td>
+      </tr>
+    </table>
+
+  <h2 class="survey_report">Comments</h2>
+
+
+
+
+
+
+  
+  <h3 class="survey_report">Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful. These comments will be made available anonymously to the instructor as well as students so please be civil and refrain from abusive, rude, or vulgar remarks.  The comments are monitored, and inappropriate material will not be placed online.</h3>
+  <table class="tablediv comment-table">
+    <tr>
+      <td>This course required a thorough understanding of C++ which I did not have coming into the course.  I understand that it is not a good idea to make this course one on C++, which is why a prerequisite for this class should be knowledge of C++ or at least C.  In order to do this and allow freshmen to take CS2, the CS11 C/C++ track and CS1 should be allowed to be taken concurrently.  This way freshmen can take CS1 and CS11 in preparation of CS 2 in the winter term.  Most of the time I spent the first couple of weeks was just learning C++ and debugging.  As I understood the language and gdb I was able to spend less time on the frustrating parts of the assignments and actually learn the material (for example data structures, which I thought was really interesting).</td>
+    </tr>
+    <tr>
+      <td>A problem I had with this course was that the grading scheme was not well-defined. Each week, a different TA grades your assignment (and each TA has different grading standards). As a result, some TA's didn't give any credit if your code only compiled (but didn't work), some TA's took off credit for memory leaks, and some TA's took off credit for leaving TODO flags. Just to be clear, I'm not complaining about any of the decisions the TA's made, but simply about the unreliability of the grading. As a result, I didn't feel it was fair to the students, as there was inconsistency in the grading scheme, and we didn't know what to expect from week to week. </td>
+    </tr>
+    <tr>
+      <td>If you are not familiar with C++, this course can take forever. If you are, it will still  be annoying and take half as long which is still a long time. If you did well at things like USACO, this class will be a complete waste of time and you will learn nothing new, but you still have to take it.<br/><br/>However, being pass fail, you can basically put as much effort into the class as you want. It takes very little work to barely reach the pass line if that is all you are after.</td>
+    </tr>
+    <tr>
+      <td>This course is suited for P/F in the sense that it does require a lot (A LOT) of time if you want to get a decent grade in the class. A lot of info is thrown at you, and it's pretty under-united, but you definitely learn a lot if you do the sets properly. It's easy for most people to get by with a C+ or B- on the scale; however, that's not exactly a great grade, so it's nice that it's always on P/F. </td>
+    </tr>
+    <tr>
+      <td>Class is very unstructured. Work on sets with friends.</td>
+    </tr>
+    <tr>
+      <td>The workload feels a bit greater than 9 units some weeks, and a lot of work was concentrated into midterms week. The two "free" extensions were helpful, and I was glad that I waited until later in the term to use them. I would recommend learning C++ (or at least C) before taking the class. Although they do go over the language during the first week, it would be very difficult for someone who had only worked in python before to get caught up that quickly.</td>
+    </tr>
+    <tr>
+      <td>My advice to students considering this course is for them to start their homework early, as that will facilitate the greatest understanding of the content. This is so that they have time to think through the problems, and not have to debug at very early times when their brains are not at their best.</td>
+    </tr>
+    <tr>
+      <td>Every assignment is graded out of 20, with a number of bonus points. You only need 12/20 on each set to pass, but really, you should try to do the bonus points because that's where you learn the most and it's really fun. The othello tournament at the end of the class is great too.</td>
+    </tr>
+    <tr>
+      <td>In class, you get a lot of theory, and then it's "DO THIS! GO!" CS 2 makes you a much better programmer, though probably not in the way you'd want. Even if you get the theory, implementation does take some debugging and struggle-bus-ing. It seemed impossible for a while, but the satisfaction of getting it at the end was very nice. Go to office hours. Also, Solomon is amazing.</td>
+    </tr>
+    <tr>
+      <td>This course takes forever. If you do not know C or C++ the first half is death. A frosh I was working with took almost 30 hours on each of the first sets... Despite this, it's a pretty good course.</td>
+    </tr>
+    <tr>
+      <td>There are a lot of different positive and negative aspects of the course. For one, those who come from CS1 will not be prepared to take this class as it is right now. That said, this is the class you take after CS1. CS2 brings you up to speed whether you like it or not. I personally had to get a ton of help from other people before I became competent about halfway through the term. However, by the end I felt like I learned a lot of practical programming skills in C++, and I definitely am not the same programmer that I was from CS1 (in a good way). <br/><br/>The assignments were challenging and time consuming, but worthwhile. One thing I found particularly frustrating was that sometimes we were allowed a lot of freedom on the assignments, and sometimes we were allowed very little. This made it difficult to evaluate what things we were allowed to change at any given time, so sometimes it felt like my hand was being held and sometimes it felt like I had to implement everything. However, that observation may just be because of my inexperience.<br/><br/>Finally, the example code that is given in lecture is in Java. I understand that this code was meant to broaden students' understanding of programming, but for me, someone who has just come from CS1, it was overwhelming to learn C++ in the first week and absorb algorithms and examples in Java. It was just too much. Perhaps half (or probably more) of the students have a ton of experience in CS, but the class should be designed for those who came into the class with the prerequisite.<br/><br/>In any case, this class is very useful and helpful to get a quick and fast introduction to a lot of powerful concepts in CS. On that front, this class was an overwhelming success. I look forward to my other CS classes with the experience I gained from this class. </td>
+    </tr>
+    <tr>
+      <td>A good second-ever CS course, but TAKE CS11 C TRACK OVER WINTER BREAK IF YOU DON'T KNOW C++! This is EXTREMELY important. If you do not know C or C++ to any degree, you must do all the work in CS11; otherwise, you'll have a horrible time and drop the class very quickly. The course starts very difficult and gets very easy after about 4 weeks. There are some assignments I didn't code at all for, which is the fault of the course and the way it's designed. It's not a bad course, and you'll learn a lot.</td>
+    </tr>
+    <tr>
+      <td>Well, this course .... was not as bad as people told me it would be. First two sets combined took me over 35, probably 40 hours, but it got a lot better. They throw all of C++ at you in three days and expect you to know it down after an assignment or two. But after that, you do actually know enough to do most of the remaining assignments. OH are *incredibly* helpful. <br/>There is plenty of great material in this course. It doesn't go into too much depth, but it gives you enough of a taste of things that you can puzzle through interview questions, which is a major goal right?</td>
+    </tr>
+    <tr>
+      <td>Be prepared to spend an extensive amount of time on the assignments. The labs are much more difficult than the lectures and involve extensive debugging. The graphs lab falls during midterms and is especially difficult. Seeking out help from TAs can be helpful. <br/><br/>On the bright side, you will become better at programming and debugging.<br/><br/>CS 11 C track helps with learning C++ faster and avoiding memory issues such as segmentation faults.</td>
+    </tr>
+    <tr>
+      <td>Frontloading the bonus points was super helpful later in term - basically save your P/Fing for when you need it. </td>
+    </tr>
+    <tr>
+      <td>Over winter break, learn C++ from some other source. The class does not (and perhaps should not) teach you this language. Although all the concepts should be familiar from CS 1 (except maybe pointers?), you will struggle significantly if you don't understand the syntax.<br/><br/>I've found learncpp.com to be immensely useful. That's how I learned it back in high school, and while they've changed some things for C++11, the content quality doesn't seem to have suffered any.</td>
+    </tr>
+    <tr>
+      <td>Terrible course. Tries to cover everything in CS, ends up covering nothing. Assignments with endless errors, needlessly taught in C++, lectures irrelevant to homework. You learn more in CS 11 C++, but it's 1/3 the units (and 1/5 the work!) The placement test has historically been more work than all of the class combined, which is ridiculous. This class is the worst class I've taken. The only person this class could possibly benefit is someone who already knows C++ and just wants practice programming random things in it. Do not take this class unless you have to.</td>
+    </tr>
+    <tr>
+      <td>If you haven't programmed much before, be prepared to spend 8-12 hours or more on some of the homework assignments. This course has a lot of material but it's not unreasonably difficult and you'll learn a lot. For CS majors, there are a lot of optional assignments with difficult but interesting problems so the more you put into this course, the more you'll get out of it. Start the assignments early!</td>
+    </tr>
+    <tr>
+      <td>A good course into programming useful things. This class seemed appropriately united, as I didn't go to class, but spent on average 9 hours per week figuring out each set.<br/><br/>I think this class's greatest asset is that it really helps pinpoint where your strengths or weaknesses as a beginner programmer are. Debugging can often take awhile, but the more you do it, the more you are able to realize where you're likely to make the errors that can mean the difference between a right and wrong answer. If you're inexperienced with this, you should try to use gdb and valgrind often. <br/><br/>To a lot of people, coding seemed to be such a drag. But you should think of CS2 as not so much about learning material as learning how CS works and how it can be used to solve all kinds of problems. </td>
+    </tr>
+    <tr>
+      <td>The workload is ridiculously high, and it disrupted my other classes considerably. As someone very familiar with programming, this course is not necessarily hard, and I understood all the assignments easily, but it requires an inordinate amount of work. Fortunately, I passed all of my classes this term, but I wouldn't have been surprised had I not because of this class.</td>
+    </tr>
+    <tr>
+      <td>If you haven't taken some form of C++ or at least C, expect to spend somewhere like 40 hours in the first two weeks.</td>
+    </tr>
+    <tr>
+      <td>It's a good idea to start sets early, especially if you don't have much of a CS background (like me). Most sets I'd work all night 16+ hours.</td>
+    </tr>
+    <tr>
+      <td>Homework was not difficult, but if you have trouble, just show up to office hours. Lecture slides are posted online; go to recitations on Fridays because they generally are helpful for sets.</td>
+    </tr>
+    <tr>
+      <td>Pass fail this hard core. Its a bunch of work that you're not gonna get done perfectly anyway; do what you need to learn the material and pass and be done.</td>
+    </tr>
+    <tr>
+      <td>Workload is honestly pretty manageable. Don't be afraid of this class, but make sure you give each set like 2 days to think about/work on. They can be long, but it's pretty easy to get the bare minimum number of points for each set. </td>
+    </tr>
+    <tr>
+      <td>Oftentimes the set would not be posted until Friday (should have been posted Wednesday), which crunched all my Core into the weekend and left the set for Monday night (due Tues 5pm). Doable in a long night though (5-9 hrs for me).</td>
+    </tr>
+    <tr>
+      <td>REPEAT AFTER ME: DO NOT TAKE THIS COURSE WITHOUT A WORKING KNOWLEDGE OF C++! Otherwise you will find the class incredibly time consuming and minimally informative. ESPECIALLY don't take if you aren't a CS major, but are simply looking for more CS experience through coursework: take CS11 instead.</td>
+    </tr>
+    <tr>
+      <td>The best adjective to describe CS2 is "self-important." Regardless of your background, the class takes a large amount of time. If you have a lot of background, you don't learn very much for the amount of effort that the class requires. As a result, it's often the least productive use of your time, which is very unfortunate.<br/><br/>Realistically, the class should have a more reasonable placement exam (i.e. one that can be finished <5-6 hours, like other classes).</td>
+    </tr>
+    <tr>
+      <td>Start early on assignments. Also, CS1 is not required to take this class if you have some level of programming ability (I did not take it).</td>
+    </tr>
+  </table>
+
+
+
+<div id="report_detail_div">
+  <div class="title">Score Breakdown:</div>
+  <div class='rdd_report_graph'>
+    <img class="c0" src="/res/tqfr/img/Excellent.png" />
+    <img class="c1" src="/res/tqfr/img/Very Good.png" />
+    <img class="c2" src="/res/tqfr/img/Good.png" />
+    <img class="c3" src="/res/tqfr/img/Fair.png" />
+    <img class="c4" src="/res/tqfr/img/Poor.png" />
+    <img class="c5" src="/res/tqfr/img/NA.png" />
+  </div>
+  <table class="popup_table">
+  </table>
+</div>
+
+
+
+    </div>
+  </div>
+  <div id="after_content"></div>
+  
+  <script src="/res/tqfr/js/jquery.dataset.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  var create_report_detail = function (evt) {
+    var idx, len, max, top, lines,
+      data = $(this).dataset("values").split(","),
+      titles = ["Excellent", "Very Good", "Good", "Fair", "Poor", "N/A"],
+      total = $(this).dataset("total");
+    len = data.length;
+    max = Math.max.apply(null, data),
+    loc = {};
+
+    // If you're gonna do percents that add up to 100, you gotta make sure they don't add up to 99.9% or 100.1%.
+    percents = [];
+    total_percent = 0.0;
+    last_percent_idx = 0;
+    for (idx = 0; idx < len; idx += 1) {
+      percent = Math.round(data[idx] / total * 1000) / 10;
+      percents.push(percent);
+      total_percent += percent;
+      // Keep track of the last non-0 percent value, so we know which one to tweak if they don't add up.
+      if (percent) {
+        last_percent_idx = idx;
+      }
+    }
+    if (total_percent > 100) {
+      percents[last_percent_idx] -= 0.1;
+    }
+    else if (total_percent < 100) {
+      percents[last_percent_idx] += 0.1;
+    }
+
+    $("#report_detail_div table").empty();
+    for (idx = 0; idx < len; idx += 1) {
+      lines = [];
+      lines.push("<tr>");
+      lines.push("<td><div class='legend_c" + idx + "'></div>");
+      lines.push(titles[idx] + "</td>");
+      lines.push("<td>Number: " + data[idx] + "</td>");
+      // We've already rounded to the nearest 0.1%, but the vagueries of floating point math mean we need to chop anyway.
+      lines.push("<td>Percentage: " + percents[idx].toFixed(1) + "%</td>");
+      lines.push("</tr>");
+      if (max == 0) {
+        $("#report_detail_div .c" + idx).css("height", "0px");
+      }
+      else{
+        $("#report_detail_div .c" + idx).css("height", ((data[idx] / max) * 50) + "px");
+      }
+      $("#report_detail_div table").append(lines.join(""));
+    }
+    loc = fix_position(evt, 350, 250, 5);
+    $("#report_detail_div").css({
+      "display": "block",
+      "left": loc.x + "px",
+      "top": loc.y + "px",
+    });
+  };
+
+  var destroy_report_detail = function (evt) {
+    $("#report_detail_div").css("display", "none");
+  };
+
+  var fix_position = function (evt, w, h, margin) {
+    var x, y;
+    var view_h = $(window).height();
+    var view_t = $(document).scrollTop();
+    var rel_y = evt.pageY - view_t;
+    if ((rel_y + h) > (view_h - margin)) {
+      y = evt.pageY - ((rel_y + h) - (view_h - margin));
+    } else {
+      y = evt.pageY - 16;
+    }
+    x = evt.pageX + 25;
+    return {'x': x, 'y': y};
+  }
+
+  var make_report_graph = function (element) {
+    var idx, len, max, data = $(element).dataset("values").split(",");
+    len = data.length;
+    max = Math.max.apply(null, data);
+    for (idx = 0; idx < len; idx += 1) {
+      if (max == 0) {
+        $(element).children(".c" + idx).css("height", "0px");
+      }
+      else{
+        $(element).children(".c" + idx).css("height", ((data[idx] / max) * 25) + "px");
+      }
+    }
+  };
+
+  $(document).ready(function () {
+    $("table div.report_graph").each(function () {
+      make_report_graph(this);
+    }).hover(create_report_detail, destroy_report_detail);
+  });
+  </script>
+
+  <script src="/res/tqfr/js/search.js" type="text/javascript"></script>
+</body>
+</html>

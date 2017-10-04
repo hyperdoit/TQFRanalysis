@@ -1,0 +1,556 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>TQFR Reports: Survey List</title>
+  <link rel="stylesheet" href="/res/tqfr/css/survey.css" type="text/css" media="all">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  
+</head>
+
+<body>
+  <div id="before_content"></div>
+
+  <div id="content" align="center">
+    <table id="util_search">
+      <tr>
+      <td><a href="/tqfr/reports/list_surveys">Survey List</a></td>
+      <td id="content-top-spacer">&nbsp;</td>
+      <td><a href='mailto:tqfr@caltech.edu'><font color="red">Feedback</font></a></td>
+      <td><a href='javascript:window.close();'><font color="red">Exit</font></a></td>
+      <td><a href='/cas/logout'><font color="red">Logout All</font></a></td>
+      </tr>
+    </table>
+    <div id="search">
+      <form id="search-form" name="search-form" action="/tqfr/reports/search" method="POST">
+        <input class="text" id="search" name="search" type="text" value="Search" />
+        <input type="submit" id="search-submit" value="Go" />
+      </form>
+    </div>
+
+    <div id="surveySection">
+      <div id="MinHeightDiv">&nbsp;</div>
+      <div class="train">
+        <a href="/tqfr/reports/list_surveys">All Surveys</a>
+      </div>
+
+      
+
+<h1>2016-17</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=25&term_id=508">FA 2016-17</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 23.8px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">44 %</td>
+    <td class="celldivlong">3052 of 6909</td>
+    <td class="celldivlong">4.22 &plusmn; 1.04</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=27&term_id=509">WI 2016-17</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.1px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">41 %</td>
+    <td class="celldivlong">2672 of 6515</td>
+    <td class="celldivlong">4.26 &plusmn; 1.00</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=28&term_id=486">SP 2016-17</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 20.0px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">37 %</td>
+    <td class="celldivlong">2210 of 5898</td>
+    <td class="celldivlong">4.27 &plusmn; 1.03</td>
+  </tr>
+</table>
+<h1>2015-16</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=22&term_id=506">FA 2015-16</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 23.8px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">44 %</td>
+    <td class="celldivlong">3144 of 7184</td>
+    <td class="celldivlong">4.15 &plusmn; 1.05</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=23&term_id=507">WI 2015-16</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 23.2px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">43 %</td>
+    <td class="celldivlong">2855 of 6696</td>
+    <td class="celldivlong">4.17 &plusmn; 1.05</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=24&term_id=466">SP 2015-16</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 19.4px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">36 %</td>
+    <td class="celldivlong">2229 of 6204</td>
+    <td class="celldivlong">4.19 &plusmn; 1.07</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=26&term_id=510">SU 2015-16</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 10.3px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">19 %</td>
+    <td class="celldivlong">19 of 102</td>
+    <td class="celldivlong">4.51 &plusmn; 0.76</td>
+  </tr>
+</table>
+<h1>2014-15</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=19&term_id=462">FA 2014-15</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.7px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">42 %</td>
+    <td class="celldivlong">2871 of 6857</td>
+    <td class="celldivlong">4.07 &plusmn; 1.08</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=20&term_id=463">WI 2014-15</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 21.6px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">40 %</td>
+    <td class="celldivlong">2619 of 6619</td>
+    <td class="celldivlong">4.19 &plusmn; 1.02</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=21&term_id=464">SP 2014-15</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 19.4px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">36 %</td>
+    <td class="celldivlong">2135 of 5917</td>
+    <td class="celldivlong">4.19 &plusmn; 1.05</td>
+  </tr>
+</table>
+<h1>2013-14</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=16&term_id=459">FA 2013-14</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 24.3px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">45 %</td>
+    <td class="celldivlong">3165 of 7054</td>
+    <td class="celldivlong">4.07 &plusmn; 1.09</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=17&term_id=460">WI 2013-14</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 21.6px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">40 %</td>
+    <td class="celldivlong">2641 of 6521</td>
+    <td class="celldivlong">4.12 &plusmn; 1.07</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=18&term_id=419">SP 2013-14</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 18.4px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">34 %</td>
+    <td class="celldivlong">2021 of 5869</td>
+    <td class="celldivlong">4.13 &plusmn; 1.09</td>
+  </tr>
+</table>
+<h1>2012-13</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=13&term_id=439">FA 2012-13</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.7px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">42 %</td>
+    <td class="celldivlong">2911 of 6931</td>
+    <td class="celldivlong">4.05 &plusmn; 1.09</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=14&term_id=440">WI 2012-13</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 21.1px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">39 %</td>
+    <td class="celldivlong">2608 of 6692</td>
+    <td class="celldivlong">4.06 &plusmn; 1.12</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=15&term_id=399">SP 2012-13</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 17.3px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">32 %</td>
+    <td class="celldivlong">1928 of 5991</td>
+    <td class="celldivlong">4.14 &plusmn; 1.05</td>
+  </tr>
+</table>
+<h1>2011-12</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=10&term_id=383">FA 2011-12</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 24.3px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">45 %</td>
+    <td class="celldivlong">3160 of 7061</td>
+    <td class="celldivlong">4.03 &plusmn; 1.09</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=11&term_id=384">WI 2011-12</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 25.4px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">47 %</td>
+    <td class="celldivlong">3194 of 6755</td>
+    <td class="celldivlong">4.00 &plusmn; 1.12</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=12&term_id=385">SP 2011-12</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 20.5px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">38 %</td>
+    <td class="celldivlong">2287 of 6063</td>
+    <td class="celldivlong">4.11 &plusmn; 1.06</td>
+  </tr>
+</table>
+<h1>2010-11</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=7&term_id=262">FA 2010-11</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 23.2px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">43 %</td>
+    <td class="celldivlong">2905 of 6803</td>
+    <td class="celldivlong">3.96 &plusmn; 1.10</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=8&term_id=381">WI 2010-11</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.7px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">42 %</td>
+    <td class="celldivlong">2749 of 6537</td>
+    <td class="celldivlong">3.96 &plusmn; 1.11</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=9&term_id=359">SP 2010-11</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 21.6px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">40 %</td>
+    <td class="celldivlong">2425 of 6025</td>
+    <td class="celldivlong">4.02 &plusmn; 1.06</td>
+  </tr>
+</table>
+<h1>2009-10</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=3&term_id=261">FA 2009-10</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.7px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">42 %</td>
+    <td class="celldivlong">2807 of 6725</td>
+    <td class="celldivlong">4.00 &plusmn; 1.07</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=4&term_id=379">WI 2009-10</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.7px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">42 %</td>
+    <td class="celldivlong">2751 of 6519</td>
+    <td class="celldivlong">4.01 &plusmn; 1.09</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=5&term_id=319">SP 2009-10</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 21.6px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">40 %</td>
+    <td class="celldivlong">2355 of 5928</td>
+    <td class="celldivlong">4.00 &plusmn; 1.09</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=6&term_id=380">SU 2009-10</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 12.4px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">23 %</td>
+    <td class="celldivlong">16 of 71</td>
+    <td class="celldivlong">3.79 &plusmn; 1.15</td>
+  </tr>
+</table>
+<h1>2008-09</h1>
+<table class="tablediv">
+  <tr class="rowdiv">
+    <td class="questiondiv header">Survey</td>
+    <td class="headerdivlong">Response</td>
+    <td class="headerdiv">Rate</td>
+    <td class="headerdivlong">Surveys</td>
+    <td class="headerdivlong">Score</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=1&term_id=342">WI 2008-09</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 25.4px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">47 %</td>
+    <td class="celldivlong">2990 of 6381</td>
+    <td class="celldivlong">3.86 &plusmn; 1.13</td>
+  </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=2&term_id=299">SP 2008-09</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 22.1px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">41 %</td>
+    <td class="celldivlong">2384 of 5852</td>
+    <td class="celldivlong">4.00 &plusmn; 1.06</td>
+  </tr>
+</table>
+
+    </div>
+  </div>
+  <div id="after_content"></div>
+  
+  <script src="/res/tqfr/js/search.js" type="text/javascript"></script>
+</body>
+</html>
