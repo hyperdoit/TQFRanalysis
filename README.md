@@ -7,12 +7,14 @@ Specifically, right now it is capable of:
 
 2. Aggregating and displaying data on a class or professor from files you have scraped, and displaying a number of analytics on said aggregate, including the mean, standard deviation, number respondents and quartiles for basically any numerical data collected by TQFRs. It will also allow you to select which of the pages to include in the aggregate, and recalculate based on that.
 
+3. Constructing class aggregates for all TQFRpages currently loaded. Displaying statistics on numerical values for those classes. Sorting by one of those numerical values, and redisplaying. Doing everything in item # 2 for individual classes within this list. (Note: a bug currently causes a small fraction of classes to not aggregate correctly, and display the default -42 for their statistics instead of the correct value. Slated to be fixed the next time I select classes at Caltech. In the meantime, selecting an individual year to represent the class can be used to work around this problem.)
+
 REQUIREMENTS:
 
 You must have an internet connection and an access.caltech username and password to pull new data, but the project includes pages that I've already scraped if you just want to see how the analysis part works.
 
 WARNING:
-Scraping can take a long time, because as I learned the hard way access.caltech will kick you out if you request too many pages too quickly. Further, since the numbers they use in the URL are kind of nonsensical (or at least the selection I looked at was), the program navigates the file tree instead of just straight up requesting class X: so if you're searching by a quantity that is only displayed in the TQFRpage (like professor), it has to actually request every single page in all of TQFRs if you aren't giving it any other information to narrow things down (the advancedScrape option is GREAT for this if you know your professor only teaches in a certain division or just a few departments).
+Scraping can take a long time, because access.caltech will kick you out if you request too many pages too quickly. Further, since the numbers they use in the URL were nonsensical (at time of program creation), the program navigates the file tree instead of just straight up requesting class X: so if you're searching by a quantity that is only displayed in the TQFRpage (like professor), it has to actually request every single page in all of TQFRs if you aren't giving it any other information to narrow things down (the advancedScrape option is GREAT for this if you know your professor only teaches in a certain division or just a few departments).
 
 Project structure overview:
 
@@ -30,7 +32,7 @@ Contains some utility functions (like prettyPrintTable and ensureFolder) and a n
 
 Represents EITHER a TQFRpage file, or a template TQFR page that you can match actual instances or other templates to, for use in sorting.
 
-Notes year, term, division, className, termChar (A/B/C, I.e. which set of a class it is, not necessarily which term it is given in--could use a better name, now that I think about it), classNameForFileName (standardized), url, pracOrAnal, classNum, professors, departments. 
+Notes year, term, division, className, termChar (A/B/C, I.e. which set of a class it is, not necessarily which term it is given in), classNameForFileName (standardized), url, pracOrAnal, classNum, professors, departments. 
 
 Contains a TQFRdata instance, though it doesn't necessarily do anything with it; the scraper doesn't, anyway.
 Its most important methods are probably initFromFilenameAndPath(self, filename, path), setMatchAny(self), copy(self), and especially matches(self, other).
@@ -77,9 +79,9 @@ relatively quick:
 
 Not so quick:
 
--Being able to search for classes/professors/TAs by their statistical quantities, e.g. "Average overall class rating > X".
+-Being able to search for professors/TAs by their statistical quantities, e.g. "Average overall class rating > X".
 
--Construct a list of any number of classes/professors/TA's and rank them by statistical quantities (okay, this one is more a curiosity than actually super useful.).
+-Construct a list of any number of professors/TA's and rank them by statistical quantities (okay, this one is more a curiosity than actually super useful.).
 
 -Being able to scrape data from the registrar's course page, so that it knows which classes are available this term, and taught by whom...
 
