@@ -205,69 +205,91 @@ class TQFRanalyzer:
     
     
     # ================ User interaction =================
+        
+    def analyzerCommands(self):
+        # Note: Includes stuff I haven't coded up yet!
+        # Remember to add new commands to analyzerInstructs, too!
+        analyzerCommands = """    Things not yet stable have # in front.
+fullLoad
+templateLoad
+analyzeClass <department1> <number> [termChar, if it has one] ['prac' if practical, 'anal' if analytical, nothing otherwise]
+analyzeProfessor <ProfessorFirstname> <ProfessorLastname>
+#analyzeTA <TAfirstName> <TAlastname>
+constructClassAggregates | constructClaggs
+displayClassAggsStats | claggStats
+sortClaggs
+analyzeClagg <className, exactly as listed on one of the clagg displays>
+importantNumbers
+#constructProfessorAggregates
+instructions | help | info | information
+commands
+done"""
+        print analyzerCommands
+    
     def analyzerInstructs(self):
-        print "COMMANDS:"
-        for command in self.analyzerCommandInstructs:
-            print command         
-    
+            print "COMMANDS:"
+            # NOT DONE-- And possibly should add TA recommendation.
+            # Remember to add new names to "commands" printing too!
+            analyzerCommandInstructs = """fullLoad
+    Loads basic data on every file you have in your scrapedPages directory that has not already been loaded into the program for analysis. 
+    This generally took me about 1 minute/year of classes being loaded.    
+templateLoad
+    Loads basic data on every file you have in your scrapedPages directory that has not already been loaded, IF it matches a template you 
+    will be prompted to construct. Way faster than fullLoad if you're only interested in a subsection of the classes, 
+    and not having to go through everything can speed up some other things analysis can do as well.           
+analyzeClass <department1> <number> [termChar, if it has one] ['prac' if practical, 'anal' if analytical, nothing otherwise]
+    Usage example: analyzeClass Ma 1 A
+    If the class is cross-listed, <department1> can be any of its departments.
+    Searches every loaded file for ones that are from that class, 
+    consolidates them into an aggregate class, 
+    displays data, prompts for further pruning of data if desired.   
+analyzeProfessor <ProfessorFirstname> <ProfessorLastname>
+    Names should be capitalized and spelled correctly.
+    Searches every loaded file for ones that are taught by that professor, 
+    consolidates them into an aggregate object, 
+    displays data, prompts for further pruning of data if desired.
+analyzeTA <TAfirstName> <TAlastname>
+    Names should be capitalized and spelled correctly.
+    # TODO! -some work done, Ctrl-F taMatches in TQFRpage
+    Searches every loaded file for ones that person TA's, 
+    consolidates them into an aggregate object, 
+    displays data, prompts for further pruning of data if desired.    
+constructClassAggregates | constructClaggs
+    Assigns every loaded page to a ClassAggregate, if it is not already assigned. 
+    # Should add note about how long it will take.
+    Necessary if you want to search for a class by its aggregate data qualities 
+    (e.g., 'quality of content' score or 'Hours spent outside of class' score).                      
+displayClassAggsStats | claggStats
+    Prompts you to choose stats of interest, displays them for all constructed class aggs.  
+sortClaggs
+    Prompts you to choose one stat of interest, sorts all loaded class 
+    aggregates and displays sorted list with that agg. List will stay 
+    sorted, so later calls to display it will show same thing.
+analyzeClagg <className, exactly as listed on one of the clagg displays>
+    Does what analyzeClass does, except by picking an already 
+    constructed clagg from the list. Unlike analyzeClass, analyzeClagg 
+    will affect which pages are included in the stats displayed for 
+    the clagg in claggStats/sortClaggs/importantNumbers etc. 
+    Try looking at/excluding the individual pages with this option if you 
+    see weird things in the claggStats, or just to look at a class in
+    more detail.                                                                         
+importantNumbers
+    Prints the numbers I look at first for hums for all classAggs constructed.    
+constructProfessorAggregates
+    Assigns every loaded page to a ProfessorAggregate, if it is not already assigned. 
+    # TODO!!!!: note about how long it will take.
+    Necessary if you want to search for a professor by their aggregate data qualities 
+    (e.g., 'overall teaching' score).        
+instructions | help | info | information
+    Prints these instructions again.
+commands
+    Prints JUST the names and arguments of the valid commands.
+done
+    Indicates you have finished analyzing and return to main menu.
 
-    # NOT DONE-- And possibly should add TA recommendation.
-    analyzerCommandInstructs = [
-        """fullLoad
-            Loads basic data on every file you have in your scrapedPages directory that has not already been loaded into the program for analysis. 
-            This generally took me about 1 minute/year of classes being loaded.""",    
-        """templateLoad
-            Loads basic data on every file you have in your scrapedPages directory that has not already been loaded, IF it matches a template you 
-            will be prompted to construct. Way faster than fullLoad if you're only interested in a subsection of the classes, 
-            and not having to go through everything can speed up some other things analysis can do as well.""",             
-        """analyzeClass <department1> <number> [termChar, if it has one] ['prac' if practical, 'anal' if analytical, nothing otherwise]
-            Usage example: analyzeClass Ma 1 A
-            If the class is cross-listed, <department1> can be any of its departments.
-            Searches every loaded file for ones that are from that class, 
-            consolidates them into an aggregate class, 
-            displays data, prompts for further pruning of data if desired.""",    
-        """analyzeProfessor <ProfessorFirstname> <ProfessorLastname>
-            Names should be capitalized and spelled correctly.
-            Searches every loaded file for ones that are taught by that professor, 
-            consolidates them into an aggregate object, 
-            displays data, prompts for further pruning of data if desired.""",
-        """analyzeTA <TAfirstName> <TAlastname>
-            Names should be capitalized and spelled correctly.
-            # TODO! 
-            Searches every loaded file for ones that person TA's, 
-            consolidates them into an aggregate object, 
-            displays data, prompts for further pruning of data if desired.""",  # Some (hacky) work was done on this-- Ctrl-F taMatches in TQFRpage    
-        """constructClassAggregates | constructClaggs
-            Assigns every loaded page to a ClassAggregate, if it is not already assigned. 
-            # Should add note about how long it will take.
-            Necessary if you want to search for a class by its aggregate data qualities 
-            (e.g., 'quality of content' score or 'Hours spent outside of class' score).""",                      
-        """displayClassAggsStats | claggStats
-            Prompts you to choose stats of interest, displays them for all constructed class aggs. """, 
-        """sortClaggs
-            Prompts you to choose one stat of interest, sorts all loaded class 
-            aggregates and displays sorted list with that agg. List will stay 
-            sorted, so later calls to display it will show same thing.""",
-        """analyzeClagg <className, exactly as listed on one of the clagg displays>
-            Does what analyzeClass does, except by picking an already 
-            constructed clagg from the list. Unlike analyzeClass, analyzeClagg 
-            will affect which pages are included in the stats displayed for 
-            the clagg in claggStats/sortClaggs/importantNumbers etc. 
-            Try looking at/excluding the individual pages with this option if you 
-            see weird things in the claggStats, or just to look at a class in
-            more detail.""",                                                                           
-        """importantNumbers
-            Prints the numbers I look at first for hums for all classAggs constructed. """,   
-        """constructProfessorAggregates
-            Assigns every loaded page to a ProfessorAggregate, if it is not already assigned. 
-            # TODO!!!!: note about how long it will take.
-            Necessary if you want to search for a professor by their aggregate data qualities 
-            (e.g., 'overall teaching' score).""",         
-        """instructions | help | info | information
-            Prints these instructions again.""",
-        """done
-            Indicates you have finished analyzing and return to main menu."""]  
-    
+Typical usage: fullLoad -> constructClaggs -> claggStats or sortClaggs or analyzeClagg"""              
+            print analyzerCommandInstructs        
+
     def analyzerChoices(self, choice):
         # View choices
         args = choice.split(" ")
@@ -277,6 +299,8 @@ class TQFRanalyzer:
         helpWords = ["help", "info", "instructions", "information"]
         if choice.lower() in helpWords:
             self.analyzerInstructs()
+        elif choice == "commands":
+            self.analyzerCommands()        
         elif choice == "fullLoad":
             self.load()
         elif choice == "templateLoad":
@@ -329,22 +353,29 @@ class TQFRanalyzer:
                     print "My stats: " + str(statsList)
                 print self.displayClassAggsStats(statsList) 
             else:
-                print "Load some pages and construct some class Aggs first!"
+                print "You have no loaded classAggs. Load some TQFRpages if you haven't already, then constructClaggs."
         elif choice == "sortClaggs":
-            print "Legit statNames: "
-            print str(self.getStatNames(self.classAggs[0], "class"))
-            stat = raw_input("Enter statname to sort by exactly as above: ")
-            self.sortClaggsBy(stat)
-            print self.displayClassAggsStats([stat])
-        elif choice[:13] == "analyzeClagg " and choice[13:] in self.classAggsClassNames:
-            foundAgg = False
-            for clagg in self.classAggs:
-                if clagg.aggPage.className == choice[13:]:
-                    foundAgg = True
-                    clagg.aggLoop()
-                    break
-            if not foundAgg:
-                print "Could not find clagg."
+            if len(self.classAggs) > 0:
+                print "Legit statNames: "
+                print str(self.getStatNames(self.classAggs[0], "class"))
+                stat = raw_input("Enter statname to sort by exactly as above: ")
+                self.sortClaggsBy(stat)
+                print self.displayClassAggsStats([stat])
+            else:
+                print "You have no loaded classAggs. Load some TQFRpages if you haven't already, then constructClaggs."
+        elif choice[:13] == "analyzeClagg " :
+            if choice[13:] in self.classAggsClassNames:
+                foundAgg = False
+                for clagg in self.classAggs:
+                    if clagg.aggPage.className == choice[13:]:
+                        foundAgg = True
+                        clagg.aggLoop()
+                        break
+                if not foundAgg:
+                    print "Could not find clagg."
+            else:
+                print "Clagg name not recognized. Here are currently loaded clagg names:"
+                print self.classAggsClassNames
         elif choice == "importantNumbers":
             self.importantNumbers()               
         elif choice == "debug":
@@ -383,7 +414,7 @@ class Aggregate:
     
     Variables:
     debugOn (what kind of errors do I use?)
-    aggType: class, professor, or TA. Mostly an identifier. 
+    aggType: class, professor, or TA. Mostly an identifier. Relevant for class agg construction due to changing full class names :/
     myTemplate: the template the Aggregate is built around. Relevant for the .match.
     myPages: a list of TQFRpage instances, all of the same class/professor/TA.
     included: a list of TQFRpage instances that are CURRENTLY included in the analysis.
@@ -400,16 +431,20 @@ class Aggregate:
         self.template = template
         self.aggType = aggType
         self.aggPage = template.copy()
-        self.aggPage.mD.aggPageInit(pagesList, template.toFilename()) 
+        self.aggPage.mD.aggPageInit(pagesList, template.toFilename(), aggType) 
+        # the mD gets class name--the FULL class name--from page now.
+        # But this version is prettier and more consistent, so give access to it in classNameA:
         for page in self.myPages:
-            page.mD.className = page.toFilename()
+            page.mD.classNameA = page.toFilename()
             
     def tryAddPage(self, page):
         # Adds the page if it matches the template. Returns True if it does, False otherwise.
         # Automatically adds the page to .included. Does not automatically recalculate.
         if page.matches(self.template):
             self.myPages.append(page)
-            page.mD.className = page.toFilename()
+            # the mD gets class name--the FULL class name--from page now.
+            # But this version is prettier and more consistent, so give access to it in classNameA:
+            page.mD.classNameA = page.toFilename() 
             self.included.append(page)
             return True
         return False
@@ -437,7 +472,8 @@ class Aggregate:
         return iT
             
     def calculate(self):
-        self.aggPage.mD.aggPageInit(self.included, self.aggType)
+        #self.aggPage = template.copy()
+        self.aggPage.mD.aggPageInit(self.included, self.template.toFilename(), self.aggType)
         self.aggPage.mD.readAll()
     
     def reportAllData(self, includeComments):

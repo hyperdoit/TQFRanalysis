@@ -375,7 +375,9 @@ class TQFRdata:
     
     int responders: The number of people who submitted a survey to this page.
     int enrolled: The number of people who took this class
-    string className : used to label comments on aggregate pages.  Gotten from very top of file.  (NOT actually used by some TQFRanalyzer functions.)
+    string classNameA : also used for comment labeling in aggregates. Given to it by the Aggregate class's manipulations. A is for "Above" or "from Aggregate"
+    string className : used to label comments on aggregate pages.  Gotten from very top of file. Does NOT have classNameHeader at the end.  (NOT actually used by some TQFRanalyzer functions.)
+    string classNameHeader : the part of the classname that will show up in the names for all the tables in the class section. Need to know it so that classAggs can tell when a class has had its name changed to detect false negatives on consolidation. 
     string path: The path to the file it is from, if a single file. "AGG" if it is an aggregate. "BLANK" if whole thing is blank.
         
     ANALYTICS: =================================
@@ -412,7 +414,9 @@ class TQFRdata:
             self.nCont = []
             self.responders = 0
             self.enrolled = 0
+            self.classNameA = ''
             self.className = ''
+            self.classNameHeader = ''
             self.path = path
             # Data
             self.initAnalytics(False)
@@ -421,7 +425,8 @@ class TQFRdata:
             with open(path, 'r') as f:
                 pageText = f.read()
             pSoup = BeautifulSoup(pageText, 'html.parser')
-            self.readContsAndResponders(pageText, pSoup) # also reads className
+            self.classNameA = '' # The reigning Aggregate class will adjust this if it wants to.
+            self.readContsAndResponders(pageText, pSoup) # also reads className and classNameHeader
             self.path = path
             self.initAnalytics(True)
                 
@@ -437,12 +442,16 @@ class TQFRdata:
         self.readProfessorData()
         self.readTaData()        
     
-    def aggPageInit(self, pages, aggName):
+    def aggPageInit(self, pages, aggName, aggType):
         """ sets this to be an aggregate TQFRdata instance from all the TQFRdata instances in pages.
         it only defines those tables that are present with the same name in ALL of its pages. 
         IMPORTANT: BEFORE CALLING THIS METHOD, you should have made this instance a copy of the aggregate template.
         If you do it afterward, this will all be overwritten.
-        This DOES initialize the analytics, but does NOT calculate them."""
+        This DOES initialize the analytics, but does NOT calculate them.
+        aggType is only used for getting around the "class Name changed" issue with classAggs."""
+        baseNum = 0   # Using the latest one produced way more weirdness...
+        #len(pages)-1 # Use the latest one, chronologically, as the base reference. This actually DOESN'T guarantee latest chronologically due to teacher names. 
+        # However, I could implement a search to make it do that... it shouldn't matter though, right now.
         if len(pages) == 0: # SHOULD DEFINE THIS BEHAVIOR BETTER-right now produces we
             #print "CALLED AGGREGATE INIT WITH NO PAGES!"
             #self.setEmptyClassData()
@@ -453,18 +462,25 @@ class TQFRdata:
         tableNames = []
         # nCont will always be defined...even if it is an aggregate of aggregate pages!
         # also, my new changes make it so that everything in the nCont is a table; no "just headers"
-        # NOTE: this is relying on them not changing the full name of the class to work!
-        for cont in pages[0].mD.nCont:
+        # NOTE: this is NOT relying on them not changing the full name of the class to work (it used to). 
+        for cont in pages[baseNum].mD.nCont: 
             include = True
+            tableRegExp = cont[0] 
+            """ Sometimes The full name of a class changes slightly over the years, 
+             and thus the tables that include would be inaccurately excluded from a classAgg. if we didn't do this next if clause. """            
+            if aggType == "class" and pages[baseNum].mD.classNameHeader in tableRegExp: 
+                tableRegExp = ".*" + tableRegExp[len(pages[baseNum].mD.classNameHeader):]
+                print tableRegExp
             for page in pages:
-                if not page.mD.getTable(page.mD.nCont, cont[0]):
-                    # Comment string includes a ?, which breaks the regExp. Thus, handle it separately:
-                    m = re.match("Comments > .*", cont[0])
+                if not page.mD.getTable(page.mD.nCont, tableRegExp):                    
+                    # Number 2: Comment string includes a ?, which breaks the regExp, causing this to inaccurately return false. Thus, handle it separately,
+                    # And then, if it isn't the comments table, tell the program this table should not be included.
+                    m = re.match("Comments > .*", tableRegExp)
                     if not (m and page.mD.getTable(page.mD.nCont, "Comments > .*")): # one last check that it's really not there:
                         include = False
                         break
             if include:
-                tableNames.append(cont[0])
+                tableNames.append(tableRegExp)
         # construct total enrolled, responders, in order to construct sCont, pCont, and nCont: (man, do I even USE pCont?)
         self.className = aggName
         self.path = "AGG"
@@ -477,12 +493,12 @@ class TQFRdata:
         self.sCont = []
         self.pCont = []
         self.nCont = []
-        # initialize by copying the relevant tables from the first page
+        # initialize by copying the relevant tables from the last page
         for tableName in tableNames:
             tableName2 = tableName.replace('?', '\\?')
-            conts = [self.copyContentList([(tableName, pages[0].mD.getTable(pages[0].mD.sCont, tableName2))]), 
-                      self.copyContentList([(tableName, pages[0].mD.getTable(pages[0].mD.pCont, tableName2))]), 
-                      self.copyContentList([(tableName, pages[0].mD.getTable(pages[0].mD.nCont, tableName2))])]
+            conts = [self.copyContentList([(tableName, pages[baseNum].mD.getTable(pages[baseNum].mD.sCont, tableName2))]), 
+                      self.copyContentList([(tableName, pages[baseNum].mD.getTable(pages[baseNum].mD.pCont, tableName2))]), 
+                      self.copyContentList([(tableName, pages[baseNum].mD.getTable(pages[baseNum].mD.nCont, tableName2))])]
             for i in range(len(conts)):
                 conts[i] = [(tableName, self.noteAgg(conts[i][0][1]))]
             self.sCont += conts[0]
@@ -492,9 +508,13 @@ class TQFRdata:
             comRe = "Comments > Do you .+"
             m = re.match(comRe, tableName)
             if m:
-                self.getTable(self.sCont, comRe).insert(0, ["-----BELOW FROM CLASS: " + pages[0].mD.className + " -----"])
-                self.getTable(self.pCont, comRe).insert(0, ["-----BELOW FROM CLASS: " + pages[0].mD.className + " -----"])
-                self.getTable(self.nCont, comRe).insert(0, ["-----BELOW FROM CLASS: " + pages[0].mD.className + " -----"])
+                if pages[baseNum].mD.classNameA:
+                    commentClassName = "-----BELOW FROM CLASS: " + pages[baseNum].mD.classNameA + " " + pages[baseNum].mD.classNameHeader + " -----"
+                else:
+                    commentClassName = "-----BELOW FROM CLASS: " + pages[baseNum].mD.className + " " + pages[baseNum].mD.classNameHeader + " -----"                
+                self.getTable(self.sCont, comRe).insert(0, [commentClassName])
+                self.getTable(self.pCont, comRe).insert(0, [commentClassName])
+                self.getTable(self.nCont, comRe).insert(0, [commentClassName])
         # Now if there is more than one, add 
         if len(pages) > 1:
             pages2 = pages[1:]
@@ -550,14 +570,14 @@ class TQFRdata:
         self.readComments()
     
     def readComments(self):
+        """Right now there should ALWAYS be a 'comments table,' because if there wasn't one to begin with,
+        one should have been added in readContsAndResponders, so that aggPages of old classes wouldn't fail to display all their 
+        comments because one of the old classes didn't have comments, and so that they can report which ones did not. 
+        However, please leave the check for existence in just in case this someday changes."""
         table = self.getTable(self.nCont, "Comments > .+")
         if table:
             self.comments = table 
-            # This is NOT where I'm doing this!
-            '''
-            for row in table:
-                print row
-                self.comments.append(textwrap.fill(row[0], 80)) '''           
+        
     
     def reportClassData(self):
         if self.enrolled > 0:
@@ -639,6 +659,7 @@ class TQFRdata:
             self.reportComments()
         
     def printPage(self, contentList):
+        # Content list = nCont, pCont, or sCont.
         for item in contentList:
             if len(item) == 1:
                 print item.contents
@@ -697,6 +718,7 @@ class TQFRdata:
     def addPageToAgg(self, page):
         # NOTE: DOES NOT recalculate and initialize the data analysis objects (other than self.responders and self.enrolled.).
         # must delete any non-shared tables. Thus, the current tables we have will serve as a guide as to which to translate in.
+        # Run from the aggregate, page is the page to add. 
         self.responders += page.mD.responders
         self.enrolled += page.mD.enrolled
         tableNames = []
@@ -732,7 +754,11 @@ class TQFRdata:
             try:
                 for i in range(len(myTables)):
                     table = myTables[i]
-                    table.append(["-----BELOW FROM CLASS: " + page.mD.className + " -----"])
+                    if page.mD.classNameA:
+                        commentClassName = "-----BELOW FROM CLASS: " + page.mD.classNameA + " " + page.mD.classNameHeader + " -----"
+                    else:
+                        commentClassName = "-----BELOW FROM CLASS: " + page.mD.className + " " + page.mD.classNameHeader + " -----"
+                    table.append([commentClassName])
                     table += newTables[i]
                 return True 
             except TypeError:
@@ -779,6 +805,7 @@ class TQFRdata:
         self.pCont = self.copyContentList(self.sCont) # will be  more changes!
         self.nCont = self.copyContentList(self.sCont)
         self.readRespAndEnrolled()
+        hasComments = False
         for i in range(len(self.sCont)):
             item = self.sCont[i]
             table = item[1]
@@ -792,10 +819,11 @@ class TQFRdata:
                         else:
                             self.nCont[i][1][r][c] = num 
             elif len(item) == 2:
+                hasComments = True
                 prettyComments = []
                 for row in table:
                     #print row
-                    prettyComments.append([textwrap.fill(row[0], 120)]) # wrap length set for my convenience....
+                    prettyComments.append([textwrap.fill(row[0], 120)]) # wrap length set for my convenience.... Also adjust for not hasComments below if you change it.
                 comCont = (item[0], prettyComments)
                 del self.sCont[i]
                 del self.pCont[i]
@@ -803,6 +831,14 @@ class TQFRdata:
                 self.sCont.append(comCont)
                 self.pCont.append(comCont)
                 self.nCont.append(comCont)
+        # We don't want the fact that TQFR didn't use to have comments (2010-2011, it seems) to keep ALL comments from not displaying in an aggregate.
+        if not hasComments:
+            noCommentTableNote = textwrap.fill(u"This TQFRpage did not have a standard comments table. It may have an odd comments table with a different name. If it is old (say 2010-2011 or previous) it probably just didn't have comments.", 120)
+            noCommentTableCont = (u'Comments > Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful.', [[noCommentTableNote]])
+            #self.comments = [[noCommentTableNote]] # This will be done later if necessary. 
+            self.sCont.append(noCommentTableCont)
+            self.pCont.append(noCommentTableCont)
+            self.nCont.append(noCommentTableCont)        
                 
                             
     def readRespAndEnrolled(self):
@@ -894,6 +930,8 @@ class TQFRdata:
         headers1 = pSoup.find_all(['h2', 'h3']) #+ pSoup.find_all('h3')
         headers = [pSoup.find('h1',"offering_title")] + [pSoup.find('h1',"offering_title")] + headers1
         self.className = pSoup.find('h1', 'survey_title clearfix').contents[0].encode('utf-8')
+        self.classNameHeader = pSoup.find('h1', 'offering_title').contents[0].encode('utf-8')
+        #print self.className 
         return (headers, tables)
         
     def convertTable(self, table):

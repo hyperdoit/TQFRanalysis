@@ -79,24 +79,33 @@ else:
     
 
 
-commandInstructs = [
-"""login
-    Login to Caltech access to enable scraping. Do this once after starting the program if you intend to scrape new data.""",
-"""scrape
-    Interactively scrape class information from TQFRs for analysis. Does not load the scraped pages base info into the system-there's an option for that under analyze.""",
-"""registrar
-    Downloads 'course schedules' registrar page in the correct format. You will be prompted to provide the URL for your year and term. Also analyzes it and loads the scheduling data into the analyzer.""",
-"""analyze
-    Load and analyze scraped data.""",
-"""instructions
-    Repeat these instructions.""",
-"""done
+
+commandInstructs = """login
+    Login to Caltech access to enable scraping. Do this once after starting the program if you intend to scrape new data.
+scrape
+    Interactively scrape class information from TQFRs for analysis. Does not load the scraped pages base info into the system-there's an option for that under analyze.
+registrar
+    Downloads 'course schedules' registrar page in the correct format. You will be prompted to provide the URL for your year and term. Also analyzes it and loads the scheduling data into the analyzer.
+analyze
+    Load and analyze scraped data.
+instructions | help | info | information
+    Repeat these instructions.
+commands 
+    Prints JUST the names and arguments of the valid commands.
+done
     End the program."""
-]
+
+commandNames = """login
+scrape
+registrar
+analyze
+instructions | help | info | information
+commands
+done"""
+
 
 def mainInstructs():
-    for cmd in commandInstructs:
-        print cmd
+    print commandInstructs
 
 def mainLoop():
     """Scrapes and analyses data interactively."""
@@ -126,6 +135,8 @@ def mainLoopChoices(choice):
     helpWords = ["help", "info", "instructions", "information"]
     if choice.lower() in helpWords:
         mainInstructs()
+    elif choice == "commands":
+        print commandNames
     elif choice == "login":
         scraper.login()
     elif choice == "scrape":
@@ -207,7 +218,9 @@ for table in ptables:
         elif not "______________" in row[0] and not row[0] == "." and not isDepartmentRow(row) and not u"Course\xa0Offering" in row[0] and not u"Section" in row[0]:
             classTables[-1].append(row)
         
-
+# Will want htis back if I ever get back into it.
+"""
 for table in classTables:
     print ""
     prettyPrintTable(table)
+"""

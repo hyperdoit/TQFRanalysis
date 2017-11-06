@@ -90,6 +90,21 @@
     <td class="celldivlong">2210 of 5898</td>
     <td class="celldivlong">4.27 &plusmn; 1.03</td>
   </tr>
+  
+  <tr>
+    <td class="questiondiv">
+      <a href="/tqfr/reports/list_divisions?survey_id=29&term_id=511">SU 2016-17</a>
+    </td>
+    <td class="celldivlong">
+      <div class="response_graph">
+        <img src="/res/tqfr/img/graph_bg.gif" class="graph_frame" />
+        <div class="graph_fill" style="width: 7.0px;"></div>
+      </div>
+    </td>
+    <td class="celldiv">13 %</td>
+    <td class="celldivlong">12 of 95</td>
+    <td class="celldivlong">4.85 &plusmn; 0.44</td>
+  </tr>
 </table>
 <h1>2015-16</h1>
 <table class="tablediv">
