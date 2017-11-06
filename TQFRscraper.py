@@ -42,30 +42,31 @@ class TQFRscraper:
     
     baseURL = "https://access.caltech.edu"
     
-    scrapeCommandInstructs = [
-    """scrapeAll
-        Copy every single html file you have not yet scraped
-        in the TQFR report system into TQFRdata.""",
-    """scrapeYear <yearTitle, e.g. "2015-16">
-        Copies every html file you do not yet have from that year of TQFRs.""",   
-    """scrapeClass <department1> <number> [termChar, if it has one] ['prac' if practical, 'anal' if analytical, nothing otherwise]
-        Usage example: scrapeClass Ma 1 A
-        Copies every html file you do not yet have that have that number and that department.
-        If the class is cross-listed, <department1> should be the PRIMARY 
-        department-the one the class is listed under on the registrar.""",    
-    """scrapeProfessor <ProfessorFirstname> <ProfessorLastname>
-        Copies every html file you do not yet have
-        taught by that professor. Names should be capitalized and spelled correctly.""",
-    """scrapeAdvanced
-        Construct a specific template to match classes to for scraping. Interactively set any of year, 
-        term, division, professor, a range of numbers, department, termChar, whether it's practical or analytical, actual classname.
-        Can be SIGNIFICANTLY faster than scrapeClass or scrapeProfessor depending on how much information you specify. 
-        Just giving a division can speed things up dramatically, though make sure you're actually writing the division 
-        the way it is listed oon TQFRs!""",                      
-    """instructions
-        Prints these instructions again.""",
-    """done
-        Indicates you have finished scraping and return to main menu."""]    
+    scrapeCommandInstructs = """scrapeAll
+    Copy every single html file you have not yet scraped
+    in the TQFR report system into TQFRdata.
+scrapeYear <yearTitle, e.g. "2015-16">
+    Copies every html file you do not yet have from that year of TQFRs. 
+scrapeClass <department1> <number> [termChar] ['prac', 'anal', or nothing]
+    Usage example: scrapeClass Ma 1 A
+    Copies every html file you do not yet have that have that number and that 
+    department. If the class is cross-listed, <department1> should be the 
+    PRIMARY department-the one the class is listed under on the registrar.  
+scrapeProfessor <ProfessorFirstname> <ProfessorLastname>
+    Copies every html file you do not yet have taught by that professor. Names 
+    should be capitalized and spelled correctly.
+scrapeAdvanced
+    Construct a specific template to match classes to for scraping. 
+    Interactively set any of year, term, division, professor, a range of 
+    numbers, department, termChar, whether it's practical or analytical, 
+    actual classname. Can be SIGNIFICANTLY faster than scrapeClass or 
+    scrapeProfessor depending on how much information you specify. Just giving 
+    a division can speed things up dramatically, though make sure you're 
+    actually writing the division the way it is listed on TQFRs!                      
+instructions
+    Prints these instructions again.
+done
+    Indicates you have finished scraping and return to main menu."""    
     
     debugOn = True
     infoOn = True
