@@ -7,7 +7,7 @@ Specifically, right now it is capable of:
 
 2. Aggregating and displaying data on a class or professor from files you have scraped, and displaying a number of analytics on said aggregate, including the mean, standard deviation, number respondents and quartiles for basically any numerical data collected by TQFRs. It will also allow you to select which of the pages to include in the aggregate, and recalculate based on that.
 
-3. Constructing class aggregates for all TQFRpages currently loaded. Displaying statistics on numerical values for those classes. Sorting by one of those numerical values, and redisplaying. Doing everything in item # 2 for individual classes within this list. (Note: a bug currently causes a small fraction of classes to not aggregate correctly, and display the default -42 for their statistics instead of the correct value. Slated to be fixed the next time I select classes at Caltech. In the meantime, selecting an individual year to represent the class can be used to work around this problem.)
+3. Constructing class aggregates for all TQFRpages currently loaded. Displaying statistics on numerical values for those classes. Sorting by one of those numerical values, and redisplaying. Doing everything in item # 2 for individual classes within this list. (Note: If a class did not have a certain metric for all of its TQFRdata pages, perhaps because it was a pass-fail only class for some of them and thus doesn't report expected grade, it will display -42 for their statistics instead of the correct value. Selecting individual years to represent the class can be used to work around this if desired.)
 
 REQUIREMENTS:
 
