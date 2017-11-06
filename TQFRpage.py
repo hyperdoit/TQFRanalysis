@@ -259,7 +259,7 @@ class TQFRpage:
         print "NOTE: For any of the following, input 'ANY' to match anything. DON'T INCLUDE THE QUOTES ('') FOR ANY OF THIS."
         self.year = raw_input("Year, e.g. '2015-16': ") 
         self.term = raw_input("Term, e.g. 'FA', 'WI', 'SP': ")
-        self.division = raw_input("Division, e.g. 'BBE' or 'PMA' or 'Physical Education': ")
+        self.division = raw_input("Division, e.g. BBE, CHCHE, EAS, GPS, HSS, Institute, PMA, Performing and Visual Arts, or Physical Education: ")
         self.professors = raw_input("Enter Professor(s), separated by '_' e.g. 'Firstname McLastname' or'Firstname McLastname_Othername Lastname': ").split('_')
         if not "ANY" in self.professors:
             gen = raw_input("If you want to match any class that SHARES a professor with one of the ones you input, enter Y. Otherwise, press Enter, and it will ONLY match those that are listed under all those professors (and not a single one more). E.g. 'Y' if you want to include co-taught classes.")
@@ -270,7 +270,7 @@ class TQFRpage:
             self.classNum = [0, 9001]
         else:
             self.classNum = [int(lowNum), int(raw_input("The highest classnumber you want to match: "))]
-        deps = raw_input("Enter departments, separated by spaces: ")
+        deps = raw_input("Enter departments, separated by spaces (e.g. CS Ph): ")
         self.departments = deps.split(" ")
         if not "ANY" in deps:
             gen = raw_input("If you want to match any class that SHARES a department with one of the ones you input, enter Y. Otherwise, enter anything, and it will ONLY match those that are listed under all those departments (and not a single one more). E.g.: Y if you want to include cross-listings.")
@@ -476,7 +476,6 @@ class TQFRdata:
              and thus the tables that include would be inaccurately excluded from a classAgg. if we didn't do this next if clause. """            
             if aggType == "class" and pages[baseNum].mD.classNameHeader in tableRegExp: 
                 tableRegExp = ".*" + tableRegExp[len(pages[baseNum].mD.classNameHeader):]
-                print tableRegExp
             for page in pages:
                 if not page.mD.getTable(page.mD.nCont, tableRegExp):                    
                     # Number 2: Comment string includes a ?, which breaks the regExp, causing this to inaccurately return false. Thus, handle it separately,
@@ -1251,16 +1250,20 @@ class statObj:
             self.std = -42
             self.qs = [-42, -42, -42]
     
+    def myRound(self, num):
+        return numpy.around(num, decimals=2)
+    
     def calculate(self):
-        self.average = numpy.average(self.data)
-        self.std = numpy.std(self.data)
-        self.qs = [numpy.percentile(self.data, 25), numpy.percentile(self.data, 50), numpy.percentile(self.data, 75)]      
+        self.average = self.myRound(numpy.average(self.data))
+        self.std = self.myRound(numpy.std(self.data))
+        self.qs =[self.myRound(numpy.percentile(self.data, 25)), self.myRound(numpy.percentile(self.data, 50)), self.myRound(numpy.percentile(self.data, 75))]      
     
     def getAverage(self):
         if not self.average == -42:
             return str(round(self.average, 3))
         else:
             return "NoData"
+        
     def getStd(self):
         if not self.std == -42:
             return str(round(self.std, 3))

@@ -177,8 +177,9 @@ mainLoop()
 
 
 # Okay, actually thinking through this now.
-soupy = analyzer.loadRegistrar()
-tbls = soupy.find_all('table')
+# Will likely want the below back in the future.
+#soupy = analyzer.loadRegistrar()
+#tbls = soupy.find_all('table')
 
 ptables = []
 for table in tbls:
@@ -224,7 +225,7 @@ for table in ptables:
         elif not "______________" in row[0] and not row[0] == "." and not isDepartmentRow(row) and not u"Course\xa0Offering" in row[0] and not u"Section" in row[0]:
             classTables[-1].append(row)
         
-# Will want htis back if I ever get back into it.
+# Will want this back if I ever get back into it.
 """
 for table in classTables:
     print ""
