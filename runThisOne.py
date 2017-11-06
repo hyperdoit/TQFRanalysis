@@ -177,9 +177,11 @@ mainLoop()
 
 
 # Okay, actually thinking through this now.
+tbls=[]
 # Will likely want the below back in the future.
 #soupy = analyzer.loadRegistrar()
 #tbls = soupy.find_all('table')
+
 
 ptables = []
 for table in tbls:
