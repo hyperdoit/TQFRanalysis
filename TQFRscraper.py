@@ -42,9 +42,8 @@ class TQFRscraper:
     
     baseURL = "https://access.caltech.edu"
     
-    # I don't remember why this is a function.
-    def scrapeCommandInstructions(self):
-        return """scrapeAll
+    
+    scrapeCommandInstructs = """scrapeAll
     Copy every single html file you have not yet scraped
     in the TQFR report system into TQFRdata.
 scrapeYear <yearTitle, e.g. "2015-16">
@@ -247,7 +246,7 @@ done
         print """WARNING: scraping can take some time, as access.caltech will kick us out if we request pages too quickly. Also note that scraping by professor is only very slightly faster than scraping everything, since the professor's name can only be obtained by requesting the actual page (we can't cut the search tree short). So the only reason to use scrapeProfessor is if you don't want to take too much space. """
         # SHOULD NOTE HOW BIG AVERAGE TQFR PAGE IS in kilobytes. Also note how big average YEAR is!
         print "COMMANDS:"
-        print self.scrapeCommandInstructs()          
+        print self.scrapeCommandInstructs          
     
     def scraperChoices(self, choice, sT):
         args = choice.split(' ')
