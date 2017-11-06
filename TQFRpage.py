@@ -48,6 +48,12 @@ def tqfrFromFilename(filename):
     tqfr.initFromFilename(filename)
     return tqfr
 
+
+def wrapTo80(text):
+    # Warning: Ignores newlines!
+    return textwrap.fill(' '.join(text.split()), 80)    
+    
+    
 def prettyPrintTable(table):
     # assumes a rectangular table in the form of a list of rows that are themselves lists of columns
     # e.g. [[row1col1, row1col2], [row2col1, row2col2]]
@@ -823,7 +829,7 @@ class TQFRdata:
                 prettyComments = []
                 for row in table:
                     #print row
-                    prettyComments.append([textwrap.fill(row[0], 120)]) # wrap length set for my convenience.... Also adjust for not hasComments below if you change it.
+                    prettyComments.append([textwrap.fill(row[0], 80)]) # wrap length set for my convenience.... Also adjust for not hasComments below if you change it.
                 comCont = (item[0], prettyComments)
                 del self.sCont[i]
                 del self.pCont[i]
@@ -833,7 +839,7 @@ class TQFRdata:
                 self.nCont.append(comCont)
         # We don't want the fact that TQFR didn't use to have comments (2010-2011, it seems) to keep ALL comments from not displaying in an aggregate.
         if not hasComments:
-            noCommentTableNote = textwrap.fill(u"This TQFRpage did not have a standard comments table. It may have an odd comments table with a different name. If it is old (say 2010-2011 or previous) it probably just didn't have comments.", 120)
+            noCommentTableNote = textwrap.fill(u"This TQFRpage did not have a standard comments table. It may have an odd comments table with a different name. If it is old (say 2010-2011 or previous) it probably just didn't have comments.", 80)
             noCommentTableCont = (u'Comments > Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful.', [[noCommentTableNote]])
             #self.comments = [[noCommentTableNote]] # This will be done later if necessary. 
             self.sCont.append(noCommentTableCont)

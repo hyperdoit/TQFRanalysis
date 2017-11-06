@@ -81,11 +81,16 @@ else:
 
 
 commandInstructs = """login
-    Login to Caltech access to enable scraping. Do this once after starting the program if you intend to scrape new data.
+    Login to Caltech access to enable scraping. Do this once after starting the 
+    program if you intend to scrape new data.
 scrape
-    Interactively scrape class information from TQFRs for analysis. Does not load the scraped pages base info into the system-there's an option for that under analyze.
+    Interactively scrape class information from TQFRs for analysis. Does not 
+    load the scraped pages base info into the system-there's an option for that
+    under analyze.
 registrar
-    Downloads 'course schedules' registrar page in the correct format. You will be prompted to provide the URL for your year and term. Also analyzes it and loads the scheduling data into the analyzer.
+    Downloads 'course schedules' registrar page in the correct format. You will 
+    be prompted to provide the URL for your year and term. Also analyzes it and 
+    loads the scheduling data into the analyzer.
 analyze
     Load and analyze scraped data.
 instructions | help | info | information
