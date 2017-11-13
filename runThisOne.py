@@ -170,6 +170,8 @@ mainLoop()
 # DEBUGGING CODE.
 
 
+# You know, it would probably be worth it if I could just get a list of classes currently being offered for analyzer to cross-reference.
+
 # Not ready to be slotted into analyzer yet.
 
 # The way they write this makes me want to bang my head against a table.

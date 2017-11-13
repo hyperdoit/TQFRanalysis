@@ -172,7 +172,7 @@ class TQFRanalyzer:
         self.classAggs = self.sortAggListByStat(self.classAggs, "class", statName)
         
     # Maybe add an option to display std and quartiles?
-    def displayClassAggsStats(self, statNameList):
+    def displayClassAggsStats(self, statNameList, tabDelimited=False):
         if len(self.classAggs) < 1:
             return "No class aggregates loaded..."
         attrs = self.getStatNames(self.classAggs[0], "class")
@@ -186,7 +186,10 @@ class TQFRanalyzer:
             for stat in statNameList:
                 row.append(getattr(clagg.aggPage.mD, stat).average)
             display.append(row)
-        TQFRpage.prettyPrintTable(display)
+        if tabDelimited == False:
+            TQFRpage.prettyPrintTable(display)
+        else:
+            TQFRpage.printTabDelimitedTable(display)
         return ""
             
                 
@@ -261,8 +264,10 @@ constructClassAggregates | constructClaggs
     Assigns every loaded page to a ClassAggregate, if it is not already 
     assigned. Very quick. Necessary if you want to search for a class by its 
     aggregate data qualities (e.g., 'quality of content' score).                      
-displayClassAggsStats | claggStats
+displayClassAggsStats | claggStats [-t]
     Prompts you to choose stats, displays them for all constructed class aggs.  
+    If 'tab' option -t is included, prints the stats in a tab-delimited form
+    instead of the table form.
 sortClaggs
     Prompts you to choose one stat of interest, sorts all loaded class 
     aggregates and displays sorted list with that agg. List will stay sorted, 
@@ -330,7 +335,7 @@ fullLoad -> constructClaggs -> claggStats or sortClaggs or analyzeClagg"""
             print "TODO!"
         elif choice == "constructClassAggregates" or choice == "constructClaggs":
             self.compileAllClassAggs()
-        elif choice == "displayClassAggsStats" or choice == "claggStats":
+        elif len(args) > 0 and (args[0] == "displayClassAggsStats" or args[0] == "claggStats"):
             if len(self.classAggs) > 0:
                 print "Legit statNames: "
                 print str(self.getStatNames(self.classAggs[0], "class"))
@@ -353,7 +358,10 @@ fullLoad -> constructClaggs -> claggStats or sortClaggs or analyzeClagg"""
                     else:
                         statsList.append(response)
                     print "My stats: " + str(statsList)
-                print self.displayClassAggsStats(statsList) 
+                if "-t" in args:
+                    print self.displayClassAggsStats(statsList, tabDelimited=True) 
+                else:
+                    print self.displayClassAggsStats(statsList, tabDelimited=False) 
             else:
                 print "You have no loaded classAggs. Load some TQFRpages if you haven't already, then constructClaggs."
         elif choice == "sortClaggs":

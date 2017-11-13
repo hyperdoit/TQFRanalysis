@@ -1,6 +1,11 @@
 # TQFRanalysis BETA
 A project that helps with course planning by pulling data from the TQFRs website, and analyzing it. 
 
+
+
+
+
+
 Specifically, right now it is capable of:
 
 1. Scraping pages from the TQFR system matching any number of year, term, professor(s), a range of numbers, department, A/B/C designations, whether it's practical or analytical, or by actual classname in their system.
@@ -88,4 +93,10 @@ Not so quick:
 -...so I can use that data to write functions like "Tell me how many units this schedule ACTUALLY is" or "Find a Hum of number 200 or above that fits in this schedule that involves less than 6 hours of work outside of class when taught by the professor it's going to be taught by this term." Honestly, just "list all Hums and SS's that fit in this schedule that don't have horrible TQFR ratings" would be a nice thing to have.
 
 
+
+Historical note:
+
+TQFR scraper was first uploaded to Github when it was first developed in September 2016. 
+However, this first commit is not noted on Git because I somehow uploaded it without actually 
+making the code on my laptop a Git repository. 
 

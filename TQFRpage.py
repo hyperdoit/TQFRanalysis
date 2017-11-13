@@ -52,9 +52,18 @@ def tqfrFromFilename(filename):
 def wrapTo80(text):
     # Warning: Ignores newlines!
     return textwrap.fill(' '.join(text.split()), 80)    
-    
-    
-def prettyPrintTable(table):
+
+# For use with the below makePrettyTable string, for if I want to do this after having decided on a pretty print::
+def convertTableToTabDelimited(tableString):
+    class1 = re.sub("[ ]+\|", "\t", tableString) 
+    class2 = class1.replace("\n|", "\n")
+    class3 = class2[1:].replace("|", "\t")    
+    return class3
+
+def printTabDelimitedTable(table):
+    print convertTableToTabDelimited(makePrettyTableString(table))
+
+def makePrettyTableString(table):
     # assumes a rectangular table in the form of a list of rows that are themselves lists of columns
     # e.g. [[row1col1, row1col2], [row2col1, row2col2]]
     # also assumes no \n in elements
@@ -81,7 +90,8 @@ def prettyPrintTable(table):
                     colSizes[colNum] = len(row[colNum])
             elif len(str(row[colNum])) > colSizes[colNum]:
                 colSizes[colNum] = len(str(row[colNum]))
-    # Print the table!
+    # Make the table!
+    tblString = ""
     for row in table:
         rowString = "|"
         for colNum in range(len(row)):
@@ -95,9 +105,17 @@ def prettyPrintTable(table):
             rowString += item
             rowString += ' ' * (colSizes[colNum] - len(item))
             rowString += '|'
-        print rowString
-    return 1
+        tblString += rowString + "\n"
+    return tblString    
     
+def prettyPrintTable(table):
+    # assumes a rectangular table in the form of a list of rows that are themselves lists of columns
+    # e.g. [[row1col1, row1col2], [row2col1, row2col2]]
+    # also assumes no \n in elements
+    print makePrettyTableString(table)
+
+
+
     
 
 class TQFRpage:
@@ -775,7 +793,10 @@ class TQFRdata:
                     cell = myTableN[r][c]
                     if isinstance(cell, int):
                         myTableN[r][c] += newTableN[r][c]
-                        myTableP[r][c] = round(float(cell) / float(self.enrolled), 2)
+                        if self.enrolled > 0:
+                            myTableP[r][c] = round(float(cell) / float(self.enrolled), 2)
+                        else:
+                            myTableP[r][c] = 0 # Yes, this only matters for ones that allowed responses from unenrolled people. THose are rare, just zero it.                  
                         myTableS[r][c] = str(myTableP[r][c] * 100) + "%"
                     elif isinstance(cell, list):
                         string = ''
@@ -850,6 +871,9 @@ class TQFRdata:
         # prerequisite: sCont set correctly.
         self.responders = int(self.getTable(self.sCont, ".*Response Rate")[1][1])
         self.enrolled = int(self.getTable(self.sCont, ".*Response Rate")[1][2])    
+        #if self.enrolled < 1: # EE 99 has 8 TQFR responses over two years of surveys even though 0 people actually enrolled in the class. Huh?
+        #    seld.enrolled = 1 # This prevents divide by zero errors.  ...Decided to just fix 'em as it's used, sadly.
+            
     
     
     # ===== Helper functions used for reading in data. =======================
