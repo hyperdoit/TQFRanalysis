@@ -5,12 +5,15 @@
   <title>TQFR Reports: FA 2014-15 &mdash; APh114A</title>
   <link rel="stylesheet" href="/res/tqfr/css/survey.css" type="text/css" media="all">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="/res/tqfr/js/selectivizr-min.js"></script>
+  <![endif]-->
   
 </head>
 
 <body>
   <div id="before_content"></div>
-
+  
   <div id="content" align="center">
     <table id="util_search">
       <tr>
@@ -27,7 +30,7 @@
         <input type="submit" id="search-submit" value="Go" />
       </form>
     </div>
-
+    
     <div id="surveySection">
       <div id="MinHeightDiv">&nbsp;</div>
       <div class="train">
@@ -36,7 +39,7 @@
         &gt; <a href="/tqfr/reports/list_departments?survey_id=19&term_id=462&division_id=80425">EAS</a>
         &gt; <a href="/tqfr/reports/list_tracks?survey_id=19&term_id=462&division_id=80425&department_id=124">Applied Physics</a>
       </div>
-
+      
       
 
 
@@ -1481,7 +1484,7 @@
 
 
   
-  <h3 class="survey_report">Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful.</h3>
+  <h3 class="survey_report">Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful. These comments will be made available anonymously to the instructor as well as students so please be civil and refrain from abusive, rude, or vulgar remarks.  The comments are monitored, and inappropriate material will not be placed online.</h3>
   <table class="tablediv comment-table">
     <tr>
       <td>Pay attention to pre-reqs</td>

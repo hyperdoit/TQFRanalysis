@@ -164,8 +164,65 @@ def mainLoopChoices(choice):
 mainLoop()
 
 
+def getMyPhysElecOptions(term):
+    # Get all physics electives I haven't already taken in fall 2017
+    #templateTQFR(year, term, division, className, professors, departments, numRange, termChar, pracOrAnal)
+    #  Ph, Ay, APh 100+
+    sT = TQFRpage.templateTQFR('ANY', term, 'ANY', 'ANY', 'ANY', ['Ph', 'Ay', 'APh', 'GENERAL'], [100, 1000],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    #  Ph and Ay 20-22 (Ay  22 not actually an option, may not exist; can only take up to 10 units of Ay 20-21)
+    sT = TQFRpage.templateTQFR('ANY', term, 'PMA', 'ANY', 'ANY', ['Ph', 'Ay', 'GENERAL'], [20, 22],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    #  Ma 5
+    #templateTQFR(year, term, division, className, professors, departments, numRange, termChar, pracOrAnal):
+    sT = TQFRpage.templateTQFR('ANY', term, 'PMA', 'ANY', 'ANY', ['Ma', 'GENERAL'], [5, 5],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    # Ma 108
+    sT = TQFRpage.templateTQFR('ANY', term, 'PMA', 'ANY', 'ANY', ['Ma', 'GENERAL'], [108, 108],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    # ACM 101
+    sT = TQFRpage.templateTQFR('ANY', term, 'EAS', 'ANY', 'ANY', ['ACM', 'GENERAL'], [101, 101],  'ANY', '')
+    analyzer.loadFromTemplate(sT)    
+    
+    # This below doesn't check if a class in another department is primary cross-lister.
+    """
+    #  Ph and Ay 100+
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'PMA', 'ANY', 'ANY', ['Ph', 'Ay', 'GENERAL'], [100, 1000],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    # APh 100+
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'EAS', 'ANY', 'ANY', ['APh', 'GENERAL'], [100, 1000],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    #  Ph and Ay 20-22 (Ay  22 not actually an option, may not exist; can only take up to 10 units of Ay 20-21)
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'PMA', 'ANY', 'ANY', ['Ph', 'Ay', 'GENERAL'], [20, 22],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    #  Ma 5
+    #templateTQFR(year, term, division, className, professors, departments, numRange, termChar, pracOrAnal):
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'PMA', 'ANY', 'ANY', ['Ma', 'GENERAL'], [5, 5],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    # Ma 108
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'PMA', 'ANY', 'ANY', ['Ma', 'GENERAL'], [108, 108],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    # ACM 101
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'EAS', 'ANY', 'ANY', ['ACM', 'GENERAL'], [101, 101],  'ANY', '')
+    analyzer.loadFromTemplate(sT)
+    """
 
+def getCSelecOptions():
+    #  CS 114+
+    sT = TQFRpage.templateTQFR('ANY', 'ANY', 'ANY', 'ANY', 'ANY', ['CS', 'GENERAL'], [114, 1000],  'ANY', '')
+    analyzer.loadFromTemplate(sT)    
+    
+    
+def getCSspringElecOptions():
+    #templateTQFR(year, term, division, className, professors, departments, numRange, termChar, pracOrAnal)
+    #  CS 114+, in 
+    sT = TQFRpage.templateTQFR('ANY', 'SP', 'ANY', 'ANY', 'ANY', ['CS', 'GENERAL'], [114, 1000],  'ANY', '')
+    analyzer.loadFromTemplate(sT)    
+    
+getMyPhysElecOptions('SP')
+#getCSelecOptions()
 
+analyzer.compileAllClassAggs()
 
 # DEBUGGING CODE.
 
@@ -181,8 +238,8 @@ mainLoop()
 # Okay, actually thinking through this now.
 tbls=[]
 # Will likely want the below back in the future.
-#soupy = analyzer.loadRegistrar()
-#tbls = soupy.find_all('table')
+soupy = analyzer.loadRegistrar()
+tbls = soupy.find_all('table')
 
 
 ptables = []
@@ -228,10 +285,58 @@ for table in ptables:
             classTables.append([row])
         elif not "______________" in row[0] and not row[0] == "." and not isDepartmentRow(row) and not u"Course\xa0Offering" in row[0] and not u"Section" in row[0]:
             classTables[-1].append(row)
-        
+
+
 # Will want this back if I ever get back into it.
 """
 for table in classTables:
     print ""
     prettyPrintTable(table)
 """
+
+classesOffered = []
+for table in classTables:
+    #print table[0][0]
+    className = table[0][0].replace(u'\xa0', ' ').replace('  ', ' ')
+    className = className.replace(' 0', ' ').replace(' 0', ' ')
+    firstDigit = -1
+    lastDigit = len(className)-1
+    for i in range(0, len(className)):
+        if className[i] in "0123456789" and firstDigit == -1:
+            firstDigit = i
+        if className[i] in "0123456789" and i > 0 and  not className[i-1] in "0123456789":
+            lastDigit = i
+    # Might want lastDigit someday if there's a spacing mistake with termChars
+    if firstDigit > 0 and not className[firstDigit-1] == ' ':
+        className = className[:firstDigit] + ' ' + className[firstDigit:]
+    print className
+    classesOffered.append(className)
+
+"""
+lists: ====
+    loadedNames: a list of all the filenames in scrapedPagesPath when last loaded. 
+    loaded: a list containing a TQFRpage instance for every file in scrapedPages, once it has been loaded into- NOT automatically initialized!
+    classAggs: a list of ClassAggregates. Once constructed, one for each class in the loaded.
+    classAggsClassNames : a list of the human-readable names of the classes in the classAggs list."""
+
+
+def isClassNameOffered(className):
+    #print className
+    if className in classesOffered:
+        return True
+    else:
+        return False
+
+def isClaggOffered(clagg):
+    #print 
+    if clagg.aggPage.className in classesOffered:
+        return True
+    else:
+        return False
+
+
+# These important lines!
+#analyzer.classAggs = filter(isClaggOffered, analyzer.classAggs)
+#analyzer.classAggsClassNames = filter(isClassNameOffered, analyzer.classAggsClassNames)
+
+

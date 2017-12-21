@@ -25,7 +25,8 @@ class TQFRanalyzer:
     lists: ====
     loadedNames: a list of all the filenames in scrapedPagesPath when last loaded. 
     loaded: a list containing a TQFRpage instance for every file in scrapedPages, once it has been loaded into- NOT automatically initialized!
-    classAggs: a list of ClassAggregates. Once constructed, one for each class in the loaded.
+    classAggs: a list of ClassAggregates. If you run constructClaggs and nothing else, one for each class in the loaded.
+    classAggsClassNames : a list of the human-readable names of the classes in the classAggs list. Note classAggs and classAggsClassNames are NOT necessarily in the same order.
     """
 
     def __init__(self, tqfrDataPath):
@@ -140,6 +141,13 @@ class TQFRanalyzer:
                 aggy.calculate()
                 self.classAggs.append(aggy)
                 
+    def removeClagg(self, claggName):
+        if not claggName in self.classAggsClassNames:
+            print "Clagg not loaded."
+            return 0
+        # TODO! used filter function for checking if registrar offered it.
+        
+            
     def getStatNames(self, agg, aggType):
         if aggType == "class":
             mine = agg.aggPage.mD
@@ -219,6 +227,7 @@ analyzeClass <department1> <number> [termChar] ['prac', 'anal', or nothing]
 analyzeProfessor <ProfessorFirstname> <ProfessorLastname>
 #analyzeTA <TAfirstName> <TAlastname>
 constructClassAggregates | constructClaggs
+clearClassAggregates | clearClaggs
 displayClassAggsStats | claggStats
 sortClaggs
 analyzeClagg <className, exactly as listed on one of the clagg displays>
@@ -229,10 +238,20 @@ commands
 done"""
         print analyzerCommands
     
+
+
     def analyzerInstructs(self):
             print "COMMANDS:"
             # NOT DONE-- And possibly should add TA recommendation.
             # Remember to add new names to "commands" printing too!
+            
+            # SOme good ones to add.
+            """removeClagg <className, exactly as listed on one of the clagg displays>
+                Removes a given clagg from your list of consideration. Does not 
+                remove loaded pages.
+            removeClaggs <department, numbers (w/ term chars) separated by commas. & more>
+                As removeClagg, but en masse. Includes crosslistings. Example:"""            
+
             analyzerCommandInstructs = """fullLoad
     Loads basic data on every file you have in your scrapedPages directory that 
     has not already been loaded into the program for analysis. This generally 
@@ -263,7 +282,11 @@ analyzeTA <TAfirstName> <TAlastname>
 constructClassAggregates | constructClaggs
     Assigns every loaded page to a ClassAggregate, if it is not already 
     assigned. Very quick. Necessary if you want to search for a class by its 
-    aggregate data qualities (e.g., 'quality of content' score).                      
+    aggregate data qualities (e.g., 'quality of content' score).      
+clearClassAggregates | clearClaggs
+    Removes all constructed class aggregates from the system. Does not 
+    remove the loaded pages used to construct them. This feature exists 
+    because loading the pages takes a lot longer than constructing claggs.
 displayClassAggsStats | claggStats [-t]
     Prompts you to choose stats, displays them for all constructed class aggs.  
     If 'tab' option -t is included, prints the stats in a tab-delimited form
@@ -364,6 +387,9 @@ fullLoad -> constructClaggs -> claggStats or sortClaggs or analyzeClagg"""
                     print self.displayClassAggsStats(statsList, tabDelimited=False) 
             else:
                 print "You have no loaded classAggs. Load some TQFRpages if you haven't already, then constructClaggs."
+        elif choice == "clearClassAggregates" or choice == "clearClaggs":
+            self.classAggs = []
+            self.classAggsClassNames = []
         elif choice == "sortClaggs":
             if len(self.classAggs) > 0:
                 print "Legit statNames: "

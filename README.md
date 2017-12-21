@@ -16,7 +16,13 @@ Specifically, right now it is capable of:
 
 REQUIREMENTS:
 
+TQFRscraper is written in Python 2.7. It requires the following non-standard library packages: 
+[bs4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), 
+[requests](https://pypi.python.org/pypi/requests), 
+and [numpy](http://www.numpy.org/).  If you have pip, these are installable with py -2 -m pip install <packagename>. 
+
 You must have an internet connection and an access.caltech username and password to pull new data, but the project includes pages that I've already scraped if you just want to see how the analysis part works.
+
 
 WARNING:
 Scraping can take a long time, because access.caltech will kick you out if you request too many pages too quickly. Further, since the numbers they use in the URL were nonsensical (at time of program creation), the program navigates the file tree instead of just straight up requesting class X: so if you're searching by a quantity that is only displayed in the TQFRpage (like professor), it has to actually request every single page in all of TQFRs if you aren't giving it any other information to narrow things down (the advancedScrape option is GREAT for this if you know your professor only teaches in a certain division or just a few departments).
@@ -88,7 +94,7 @@ Not so quick:
 
 -Construct a list of any number of professors/TA's and rank them by statistical quantities (okay, this one is more a curiosity than actually super useful.).
 
--Being able to scrape data from the registrar's course page, so that it knows which classes are available this term, and taught by whom...
+-[In development] Being able to scrape data from the registrar's course page, so that it knows which classes are available this term, and taught by whom...
 
 -...so I can use that data to write functions like "Tell me how many units this schedule ACTUALLY is" or "Find a Hum of number 200 or above that fits in this schedule that involves less than 6 hours of work outside of class when taught by the professor it's going to be taught by this term." Honestly, just "list all Hums and SS's that fit in this schedule that don't have horrible TQFR ratings" would be a nice thing to have.
 

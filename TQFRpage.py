@@ -10,7 +10,7 @@ Finally, it contains the class TQFRdata, used to store data extracted from
 scraped pages.
 """
 # used to import copy before realizing sadly that it did not deepcopy nested lists.
-import re, os, numpy, textwrap
+import re, os, numpy, textwrap, sys
 from bs4 import BeautifulSoup
 
 
@@ -32,10 +32,14 @@ def iMessage(msg):
 def blankTQFR():
     return TQFRpage("20XX-XY", "XX", "DIV", "DEP 000", ["FIRSTNAME LASTNAME"], "URL")
 
-def templateTQFR(year, term, division, className, departments, numRange, termChar, professor):
-    # Input '0' for anything to accept any.
+
+# I should make a version of this using optional arguments and set anything not mentioned to ANY.
+# setAllDirect(self, template, year, term, division, className, classNameForFileName, professors, url, departments, classNum, termChar, pracOrAnal, mD)
+def templateTQFR(year, term, division, className, professors, departments, numRange, termChar, pracOrAnal): # add pracOrAnal?
+    # Input 'ANY' for anything to accept any.
     toReturn = blankTQFR()
-    toReturn.setAllDirect(True, year, term, division, className, "ANY", professor, "ANY", departments, numRange, termChar)
+    toReturn.setMatchAny() # Not sure this is strictly necessary, but it couldn't hurt.
+    toReturn.setAllDirect(True, year, term, division, className, "ANY", professors, "ANY", departments, numRange, termChar, pracOrAnal, toReturn.mD)
     return toReturn
 
 def tqfrFromFilenameAndPath(filename, path):
@@ -48,6 +52,14 @@ def tqfrFromFilename(filename):
     tqfr.initFromFilename(filename)
     return tqfr
 
+# Utillity printing functions.
+def uPrint(string):
+    # Expects a utf8 encoded string. Can fail with some characters, but doesn't crash the program when it does so.
+    print str(string).encode('utf8', errors='replace') # I should fix this better at some point.
+
+def wrapToNum(text, num):
+    # Warning: Ignores newlines!
+    return textwrap.fill(' '.join(text.split()), num)   
 
 def wrapTo80(text):
     # Warning: Ignores newlines!
@@ -63,10 +75,15 @@ def convertTableToTabDelimited(tableString):
 def printTabDelimitedTable(table):
     print convertTableToTabDelimited(makePrettyTableString(table))
 
+
+
 def makePrettyTableString(table):
     # assumes a rectangular table in the form of a list of rows that are themselves lists of columns
     # e.g. [[row1col1, row1col2], [row2col1, row2col2]]
-    # also assumes no \n in elements
+    # also assumes no \n or \r in elements. I SHOULD FIX THIS, 
+    # IT LOOKS TERRIBLE ON MONITOR BECAUSE it has extra whitespace. 
+    # I think because it's counting the full string for length and setting columns
+    # accordingly.
     if len(table) < 1:
         print "Bad table: " + str(table)
         return -1
@@ -75,44 +92,80 @@ def makePrettyTableString(table):
         return -1"""
     # Figuring out how to space the table. =======
     # Find number of columns in longest row.
-    colSizes = []
+    colSizes = [] # How many characters in each column?
+    rowHeights = [] # How many lines in each row of the table? 
     numCols = len(table[0])
     for row in table:
         if numCols < len(row):
             numCols = len(row)
+        rowHeights.append(0)
     for col in range(numCols):
         colSizes.append(0)
-    # Find maximum size of each column.
-    for row in table:
+    # Find maximum size of each column. Now supporting newlines.
+    maxCellSize = 100 # This should probably be a global setting. It's really only necessary for comments right now.
+    #, up to maxCellSize (which possibly should be a setting?) Have decided to trust input for now.
+    for rowNum in range(len(table)):
+        row = table[rowNum]
         for colNum in range(len(row)):
-            if isinstance(row[colNum], basestring):
-                if len(row[colNum]) > colSizes[colNum]:
-                    colSizes[colNum] = len(row[colNum])
-            elif len(str(row[colNum])) > colSizes[colNum]:
-                colSizes[colNum] = len(str(row[colNum]))
+            #text = str(row[colNum]) # Why was this commented out?
+            text = wrapToNum(str(row[colNum]), maxCellSize)
+            lines = text.splitlines() # splitlines recognizes \r\n
+            row[colNum] = lines[:] # Note that I save this back! It saves a lot of splitlining.
+            if len(lines) > rowHeights[rowNum]:
+                rowHeights[rowNum] = len(lines)
+            for line in lines:
+                if len(line) > colSizes[colNum]:
+                    colSizes[colNum] = len(str(row[colNum]))     
+            
+            #if isinstance(row[colNum], basestring):
+            #    if len(row[colNum]) > colSizes[colNum]:
+            #        colSizes[colNum] = len(row[colNum])
+            #elif len(str(row[colNum])) > colSizes[colNum]:
+            #    colSizes[colNum] = len(str(row[colNum]))
+            
+            
+            #if colSizes[colNum] > maxCellSize:
+            #    colSizes[colNum] = maxCellSize
     # Make the table!
     tblString = ""
-    for row in table:
-        rowString = "|"
-        for colNum in range(len(row)):
-            if isinstance(row[colNum], basestring):
-                if len(table[0]) > 0 and not re.match('-----BELOW.*', table[0][0]): # A WAY OF IDENTIFYING COMMENTS  # .encode('ascii','replace')
-                    item = row[colNum].replace('\n', '\\n')
+    for rowNum in range(len(table)):
+        row = table[rowNum]
+        #rowString = "|"
+        if rowHeights[rowNum] > 1 or (rowNum > 0 and rowHeights[rowNum-1] > 1):
+            # It's possible that I should leave this to the input, and not force it in.  Also possible that 
+            tblString += "|" + (sum(colSizes) + len(colSizes)-1)*"-" + "|\n" # Note len(colSizes) and sum(colSizes) can't be zero if rowHeights[rowNum]>1.
+        for lineNum in range(rowHeights[rowNum]):
+            lineString = "|"   
+            for colNum in range(len(row)):
+                lines = row[colNum]# Remember the splitlined result was saved
+                if len(lines) > lineNum: 
+                    item = lines[lineNum]
                 else:
-                    item = row[colNum]
-            else:
-                item = str(row[colNum]).replace('\n', '\\n')
-            rowString += item
-            rowString += ' ' * (colSizes[colNum] - len(item))
-            rowString += '|'
-        tblString += rowString + "\n"
+                    item = ""
+                lineString += item
+                lineString += ' ' * (colSizes[colNum] - len(item))
+                lineString += '|'
+                
+                """
+                if isinstance(row[colNum], basestring):
+                    if len(table[0]) > 0 and not re.match('-----BELOW.*', table[0][0]): # A WAY OF IDENTIFYING COMMENTS  # .encode('ascii','replace')
+                        item = row[colNum].replace('\n', '\\n').replace('\r', '\\r')
+                    else:
+                        item = row[colNum]
+                else:
+                    item = str(row[colNum])#.replace('\n', '\\n').replace('\r', '\\r')
+                rowString += item
+                rowString += ' ' * (colSizes[colNum] - len(item))
+                rowString += '|'
+                """
+            tblString += lineString + "\n"
     return tblString    
     
 def prettyPrintTable(table):
     # assumes a rectangular table in the form of a list of rows that are themselves lists of columns
     # e.g. [[row1col1, row1col2], [row2col1, row2col2]]
     # also assumes no \n in elements
-    print makePrettyTableString(table)
+    uPrint(makePrettyTableString(table))
 
 
 
@@ -267,7 +320,9 @@ class TQFRpage:
         self.division = division
         self.className = className
         self.classNameForFileName = classNameForFileName
+        self.professors = professors
         self.url = url
+        self.departments = departments
         self.classNum = classNum    
         self.termChar = termChar
         self.pracOrAnal = pracOrAnal
@@ -292,7 +347,7 @@ class TQFRpage:
         self.departments = deps.split(" ")
         if not "ANY" in deps:
             gen = raw_input("If you want to match any class that SHARES a department with one of the ones you input, enter Y. Otherwise, enter anything, and it will ONLY match those that are listed under all those departments (and not a single one more). E.g.: Y if you want to include cross-listings.")
-            if gen == "Y":
+            if gen == "Y" or "ANY":
                 self.departments.append("GENERAL")
         self.termChar = raw_input("Enter termChar ('A', 'B', 'C', or '') ['ANY' is also an option, as always]: ")
         self.pracOrAnal = raw_input("Enter 'prac' for practical, 'anal' for analytical, '' for a class that isn't split like that: ")

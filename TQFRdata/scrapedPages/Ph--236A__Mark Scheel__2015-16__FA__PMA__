@@ -5,12 +5,15 @@
   <title>TQFR Reports: FA 2015-16 &mdash; Ph 236A</title>
   <link rel="stylesheet" href="/res/tqfr/css/survey.css" type="text/css" media="all">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="/res/tqfr/js/selectivizr-min.js"></script>
+  <![endif]-->
   
 </head>
 
 <body>
   <div id="before_content"></div>
-
+  
   <div id="content" align="center">
     <table id="util_search">
       <tr>
@@ -27,7 +30,7 @@
         <input type="submit" id="search-submit" value="Go" />
       </form>
     </div>
-
+    
     <div id="surveySection">
       <div id="MinHeightDiv">&nbsp;</div>
       <div class="train">
@@ -36,7 +39,7 @@
         &gt; <a href="/tqfr/reports/list_departments?survey_id=22&term_id=506&division_id=80428">PMA</a>
         &gt; <a href="/tqfr/reports/list_tracks?survey_id=22&term_id=506&division_id=80428&department_id=147">Physics</a>
       </div>
-
+      
       
 
 
@@ -942,7 +945,7 @@
 
 
   
-  <h3 class="survey_report">Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful.</h3>
+  <h3 class="survey_report">Do you have any constructive comments for other students considering taking this course? In particular, comments about workload/distribution of the workload of the course, the necessity of the textbook, unexpected time requirements or flexibility, or unspecified prerequisites could be particularly helpful. These comments will be made available anonymously to the instructor as well as students so please be civil and refrain from abusive, rude, or vulgar remarks.  The comments are monitored, and inappropriate material will not be placed online.</h3>
   <table class="tablediv comment-table">
     <tr>
       <td>Having taken some courses on GR prior to coming to Caltech for grad school, I found that this course was conceptually and mathematically simpler than I was hoping for. I did get some new insights out of it based on the fact that it follows Misner Thorne and Wheeler, which has a pretty different approach to some topics/concepts than more modern books like Carroll or Wald. But if you've taken a good senior/grad level course on GR elsewhere and you were happy with it, I don't think that taking this course would be a very good use of time. I felt that the way it was taught was more geared towards it being useful for astrophysicists and classical gravity researchers than high energy/quantum info theorists looking to understand and move towards understanding modern quantum gravity and related things.</td>
