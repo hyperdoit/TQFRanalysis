@@ -35,7 +35,10 @@ library packages:
 * [requests](https://pypi.python.org/pypi/requests)
 * [numpy](http://www.numpy.org/)
 
-If you have pip, these are installable with py -2 -m pip install <packagename>.
+If you have pip, these are easily installable with
+```
+py -2 -m pip install <packagename>
+```
 
 You must have an internet connection and an access.caltech username and password
 to pull new data. The project includes pages that I've already scraped, as well,
@@ -50,16 +53,16 @@ Files:
 
 ======= runThisOne.py
 
-Initializes the TQFRscraper and TQFRanalyzer classes, sets debugOn on or off,
+* Initializes the TQFRscraper and TQFRanalyzer classes, sets debugOn on or off,
 and runs the main menu.
 
 ======= TQFRpage.py
 
-Contains some utility functions (like prettyPrintTable and ensureFolder) and a
+* Contains some utility functions (like prettyPrintTable and ensureFolder) and a
 number of classes used to represent TQFR pages and associated data for both
 TQFRscraper and TQFRanalyzer. Classes:
 
---- TQFRpage
+*--- TQFRpage
 
 Represents EITHER a TQFRpage file, or a template TQFR page that you can match
 actual instances or other templates to, for use in sorting.
