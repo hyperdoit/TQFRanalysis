@@ -60,42 +60,44 @@ and runs the main menu.
 
 * Contains some utility functions (like prettyPrintTable and ensureFolder) and a
 number of classes used to represent TQFR pages and associated data for both
-TQFRscraper and TQFRanalyzer. Classes:
+TQFRscraper and TQFRanalyzer. 
 
-*--- TQFRpage
+* Classes:
 
-Represents EITHER a TQFRpage file, or a template TQFR page that you can match
+    * --- TQFRpage
+
+        * Represents EITHER a TQFRpage file, or a template TQFR page that you can match
 actual instances or other templates to, for use in sorting.
 
-Notes year, term, division, className, termChar (A/B/C, I.e. which set of a
+        * Notes year, term, division, className, termChar (A/B/C, I.e. which set of a
 class it is, not necessarily which term it is given in), classNameForFileName
 (standardized), url, pracOrAnal, classNum, professors, departments.
 
-Contains a TQFRdata instance, though it doesn't necessarily do anything with it;
+        * Contains a TQFRdata instance, though it doesn't necessarily do anything with it;
 the scraper doesn't, anyway. Its most important methods are probably
 initFromFilenameAndPath(self, filename, path), setMatchAny(self), copy(self),
 and especially matches(self, other).
 
---- TQFRdata
+    * --- TQFRdata
 
-A large class that represents the actual contents of a TQFR page. The big
+        * A large class that represents the actual contents of a TQFR page. The big
 difference between it and TQFRpage is whether you want to bother with stripping
 data out of the tables (sometimes you don't.).
 
-Contains the methods for actually scanning a scraped file and inputting a
+        * Contains the methods for actually scanning a scraped file and inputting a
 representation of all the data on the page. 3 of them, actually; sCont, pCont,
 and nCont, though I should probably get rid of that middle one, I'm not using it
 like I thought I would. It then sorts this data into a bunch of containers, many
 of which are or contain...
 
---- StatObj
+    * --- StatObj
 
-A small class that stores a data set of integers or floats plus some statistical
+        * A small class that stores a data set of integers or floats plus some statistical
 information on them and methods for presenting it.
 
---- ProfessorData
+    * --- ProfessorData
 
-A container class for the 'Instructor Section' part of a TQFR page. TQFRdata
+        * A container class for the 'Instructor Section' part of a TQFR page. TQFRdata
 stores a list of them, which could have anywhere from 0 (PA16A Cooking Basics)
 to 16 (CMS300 Research in Computing and Mathematical Sciences) professors (or
 more, if I find a class with more Instructor Sections...though in fact right now
@@ -106,7 +108,7 @@ that class, it's not a huge priority.).
 
 --- TAdata
 
-A container class for the 'Teaching Assistant Section' of a TQFR page. TQFRdata
+        * A container class for the 'Teaching Assistant Section' of a TQFR page. TQFRdata
 stores a list of them, exactly as it does for professors. It would be pretty
 easy to make it possible to scrape and aggregate by TA; the way the classes are
 set up, I would mostly just be copying bits of code I wrote for professors and
