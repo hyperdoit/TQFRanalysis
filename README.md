@@ -130,31 +130,27 @@ Classes:
 	  taught/TA'd it in all six of those years, in which case you probably want to
 	  know that anyway.).
 
-Things I'd like this program to eventually be capable of doing:
+<h2> Possible future development </h2>
 
-relatively quick:
+<h3>Relatively quick <h3>
 
--Reading in files with tons of professors without making windows complain.
+* Reading in files with tons of professors without making windows complain.
+* Being able to scrape and aggregate by TA.
 
--Being able to scrape and aggregate by TA.
+<h3>More lengthy</h3>
 
-Not so quick:
-
--Being able to search for professors/TAs by their statistical quantities, e.g.
-"Average overall class rating > X".
-
--Construct a list of any number of professors/TA's and rank them by statistical
-quantities (okay, this one is more a curiosity than actually super useful.).
-
--[In development] Being able to scrape data from the registrar's course page, so
-that it knows which classes are available this term, and taught by whom...
-
--...so I can use that data to write functions like "Tell me how many units this
-schedule ACTUALLY is" or "Find a Hum of number 200 or above that fits in this
-schedule that involves less than 6 hours of work outside of class when taught by
-the professor it's going to be taught by this term." Honestly, just "list all
-Hums and SS's that fit in this schedule that don't have horrible TQFR ratings"
-would be a nice thing to have.
+* Being able to search for professors/TAs by their statistical quantities, e.g.
+  "Average overall class rating > X".
+* Construct a list of any number of professors/TA's and rank them by statistical
+  quantities (okay, this one is more a curiosity than actually super useful.).
+* [In development] Being able to scrape data from the registrar's course page, so
+  that it knows which classes are available this term, and taught by whom...
+* ...so I can use that data to write functions like "Tell me how many units this
+  schedule ACTUALLY is" or "Find a Hum of number 200 or above that fits in this
+  schedule that involves less than 6 hours of work outside of class when taught by
+  the professor it's going to be taught by this term." Honestly, just "list all
+  Hums and SS's that fit in this schedule that don't have horrible TQFR ratings"
+  would be a nice thing to have.
 
 <h2> Other notes </h2>
 
