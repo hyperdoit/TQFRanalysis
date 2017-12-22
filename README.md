@@ -106,7 +106,13 @@ Classes:
 	  code I wrote for professors and changing some regular expressions and 
 	  variable names.
 
+======= TQFRscraper.py
 
+One class:
+
+* TQFRscraper	  
+    * Handles login and scraping.
+	  
 ======= TQFRanalyzer.py
 
 Classes:
@@ -154,7 +160,9 @@ Classes:
 
 <h2> Other notes </h2>
 
-<h3>Program time note</h3> Scraping can take a long time, because access.caltech
+<h3>Program time note</h3> 
+
+Scraping can take a long time, because access.caltech
 will kick you out if you request too many pages too quickly. Further, since the
 numbers they use in the URL were nonsensical (at time of program creation), the
 program navigates the file tree instead of just straight up requesting class X:
