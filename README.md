@@ -132,7 +132,7 @@ Classes:
 
 <h2> Possible future development </h2>
 
-<h3>Relatively quick <h3>
+<h3>Relatively quick </h3>
 
 * Reading in files with tons of professors without making windows complain.
 * Being able to scrape and aggregate by TA.
