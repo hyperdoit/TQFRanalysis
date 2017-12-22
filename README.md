@@ -5,8 +5,6 @@ from the TQFRs website, and analyzing it.
 
 
 
-
-
 <h2>Capabilities</h2>
 
 1. Scraping pages from the TQFR system matching any number of year, term,
@@ -32,9 +30,12 @@ individual years in the aggregate menu for the class will work around this.)
 <h2>Requirements</h2>
 
 TQFRscraper is written in Python 2.7. It requires the following non-standard
-library packages: [bs4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/),
+library packages: 
+[bs4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/),  
 [requests](https://pypi.python.org/pypi/requests), and
-[numpy](http://www.numpy.org/). If you have pip, these are installable with py
+[numpy](http://www.numpy.org/). 
+
+If you have pip, these are installable with py
 -2 -m pip install <packagename>.
 
 You must have an internet connection and an access.caltech username and password

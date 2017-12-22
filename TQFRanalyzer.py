@@ -208,7 +208,7 @@ class TQFRanalyzer:
             classAgg = claAgg.aggPage
             className = classAgg.className
             #workAmountPerception = round(classAgg.mD.workAmountPerception.average, 3)
-            workAmountPerception = classAgg.mD.workAmountPerception.average.getAverage()
+            workAmountPerception = classAgg.mD.workAmountPerception.getAverage()
             hoursOutsideClass = classAgg.mD.hoursOutsideClass.getAverage()
             expectedGrade = classAgg.mD.expectedGrade.getAverage()
             passFail = classAgg.mD.passFail.getAverage()
