@@ -173,7 +173,7 @@ class TQFRanalyzer:
             print "invalid statName"
             return aggList
         if aggType == "class":
-            aggList.sort(key=lambda x: getattr(x.aggPage.mD, statName).average) #, reverse=True
+            aggList.sort(key=lambda x: getattr(x.aggPage.mD, statName).average) #, reverse=True # Using getAverage here would sometimes return strings.
         return aggList
     
     def sortClaggsBy(self, statName):
@@ -192,7 +192,7 @@ class TQFRanalyzer:
             row = []
             row.append(clagg.aggPage.className)
             for stat in statNameList:
-                row.append(getattr(clagg.aggPage.mD, stat).average)
+                row.append(getattr(clagg.aggPage.mD, stat).getAverage())
             display.append(row)
         if tabDelimited == False:
             TQFRpage.prettyPrintTable(display)
@@ -207,10 +207,11 @@ class TQFRanalyzer:
             #claAgg.calculate()
             classAgg = claAgg.aggPage
             className = classAgg.className
-            workAmountPerception = round(classAgg.mD.workAmountPerception.average, 3)
-            hoursOutsideClass = round(classAgg.mD.hoursOutsideClass.average, 3)
-            expectedGrade = round(classAgg.mD.expectedGrade.average, 3)
-            passFail = round(classAgg.mD.passFail.average, 3)
+            #workAmountPerception = round(classAgg.mD.workAmountPerception.average, 3)
+            workAmountPerception = classAgg.mD.workAmountPerception.average.getAverage()
+            hoursOutsideClass = classAgg.mD.hoursOutsideClass.getAverage()
+            expectedGrade = classAgg.mD.expectedGrade.getAverage()
+            passFail = classAgg.mD.passFail.getAverage()
             numTable.append([className, workAmountPerception, hoursOutsideClass, expectedGrade, passFail])
         TQFRpage.prettyPrintTable(numTable)
     

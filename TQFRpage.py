@@ -57,6 +57,13 @@ def uPrint(string):
     # Expects a utf8 encoded string. Can fail with some characters, but doesn't crash the program when it does so.
     print str(string).encode('utf8', errors='replace') # I should fix this better at some point.
 
+def preserveDoubleReturnsWrapTo(text, num):
+    textParts = text.split("\n\n")
+    wrappedText = []
+    for part in textParts:
+        wrappedText.append(wrapToNum(part, num))
+    return "\n\n".join(wrappedText)
+
 def wrapToNum(text, num):
     # Warning: Ignores newlines!
     return textwrap.fill(' '.join(text.split()), num)   
@@ -210,6 +217,7 @@ class TQFRpage:
     
     def initFromFilenameAndPath(self, filename, path):
         # path should be a FULL PATH, to enable mD to open the file! Filename should JUST be the filename.
+        #print "loading: " + filename
         preDeps = filename[:filename.index('--')]
         numAndTermChar = filename[filename.index('--')+2:filename.index('__')]
         m = re.search('(\d*)(.*)', numAndTermChar)
@@ -332,7 +340,7 @@ class TQFRpage:
         print "NOTE: For any of the following, input 'ANY' to match anything. DON'T INCLUDE THE QUOTES ('') FOR ANY OF THIS."
         self.year = raw_input("Year, e.g. '2015-16': ") 
         self.term = raw_input("Term, e.g. 'FA', 'WI', 'SP': ")
-        self.division = raw_input("Division, e.g. BBE, CHCHE, EAS, GPS, HSS, Institute, PMA, Performing and Visual Arts, or Physical Education: ")
+        self.division = raw_input("Division, e.g. BBE, CHCHE, EAS, GPS, HSS, Institute, PMA, Performing and Visual Arts, or Physical Education. If not ANY, will only look at classes with their first department listing in that division: ")
         self.professors = raw_input("Enter Professor(s), separated by '_' e.g. 'Firstname McLastname' or'Firstname McLastname_Othername Lastname': ").split('_')
         if not "ANY" in self.professors:
             gen = raw_input("If you want to match any class that SHARES a professor with one of the ones you input, enter Y. Otherwise, press Enter, and it will ONLY match those that are listed under all those professors (and not a single one more). E.g. 'Y' if you want to include co-taught classes.")
@@ -1348,6 +1356,7 @@ class statObj:
             return str(round(self.std, 3))
         else:
             return "NoData"        
+        
     def getQuartiles(self):
         if not (self.qs[0] == -42 and self.qs[1] == -42 and self.qs[2] == -42):
             return str([round(self.qs[0], 3), round(self.qs[1], 3), round(self.qs[02], 3)])
