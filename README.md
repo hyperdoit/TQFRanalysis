@@ -1,6 +1,7 @@
-# TQFRanalysis BETA A project that helps with course planning by pulling data
+# TQFRanalysis BETA 
+A project that helps with course planning by pulling data
 from the TQFRs website, and analyzing it.
---------------------------------------------------------------------------------
+
 
 
 
@@ -158,6 +159,8 @@ schedule that involves less than 6 hours of work outside of class when taught by
 the professor it's going to be taught by this term." Honestly, just "list all
 Hums and SS's that fit in this schedule that don't have horrible TQFR ratings"
 would be a nice thing to have.
+
+<h2> Other notes </h2>
 
 <h3>Program time note</h3> Scraping can take a long time, because access.caltech
 will kick you out if you request too many pages too quickly. Further, since the
