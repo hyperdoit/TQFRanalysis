@@ -53,66 +53,56 @@ Files:
 
 ======= runThisOne.py
 
-* Initializes the TQFRscraper and TQFRanalyzer classes, sets debugOn on or off,
+Initializes the TQFRscraper and TQFRanalyzer classes, sets debugOn on or off,
 and runs the main menu.
 
 ======= TQFRpage.py
 
-* Contains some utility functions (like prettyPrintTable and ensureFolder) and a
+Contains some utility functions (like prettyPrintTable and ensureFolder) and a
 number of classes used to represent TQFR pages and associated data for both
 TQFRscraper and TQFRanalyzer. 
 
-* Classes:
+You must have an internet connection and an access.caltech username and password
 
-    * --- TQFRpage
-
-        * Represents EITHER a TQFRpage file, or a template TQFR page that you can match
-actual instances or other templates to, for use in sorting.
-
-        * Notes year, term, division, className, termChar (A/B/C, I.e. which set of a
-class it is, not necessarily which term it is given in), classNameForFileName
-(standardized), url, pracOrAnal, classNum, professors, departments.
-
-        * Contains a TQFRdata instance, though it doesn't necessarily do anything with it;
-the scraper doesn't, anyway. Its most important methods are probably
-initFromFilenameAndPath(self, filename, path), setMatchAny(self), copy(self),
-and especially matches(self, other).
-
-    * --- TQFRdata
-
-        * A large class that represents the actual contents of a TQFR page. The big
-difference between it and TQFRpage is whether you want to bother with stripping
-data out of the tables (sometimes you don't.).
-
-        * Contains the methods for actually scanning a scraped file and inputting a
-representation of all the data on the page. 3 of them, actually; sCont, pCont,
-and nCont, though I should probably get rid of that middle one, I'm not using it
-like I thought I would. It then sorts this data into a bunch of containers, many
-of which are or contain...
-
-    * --- StatObj
-
-        * A small class that stores a data set of integers or floats plus some statistical
-information on them and methods for presenting it.
-
-    * --- ProfessorData
-
-        * A container class for the 'Instructor Section' part of a TQFR page. TQFRdata
-stores a list of them, which could have anywhere from 0 (PA16A Cooking Basics)
-to 16 (CMS300 Research in Computing and Mathematical Sciences) professors (or
-more, if I find a class with more Instructor Sections...though in fact right now
-it can't have a 16-professor class, because the filename needed to read it in is
-above Windows' 260-character path limit. I have some ideas for getting around
-this without huge restructuring, but given that there is only one respondent to
-that class, it's not a huge priority.).
-
---- TAdata
-
-        * A container class for the 'Teaching Assistant Section' of a TQFR page. TQFRdata
-stores a list of them, exactly as it does for professors. It would be pretty
-easy to make it possible to scrape and aggregate by TA; the way the classes are
-set up, I would mostly just be copying bits of code I wrote for professors and
-changing some regular expressions and variable names.
+Classes:
+* TQFRpage
+    * Represents EITHER a TQFRpage file, or a template TQFR page that you can 
+	match actual instances or other templates to, for use in sorting.
+    * Notes year, term, division, className, termChar (A/B/C, I.e. which set of
+	a class it is, not necessarily which term it is given in), 
+	classNameForFileName (standardized), url, pracOrAnal, classNum, professors,
+	departments.
+    * Contains a TQFRdata instance, though it doesn't necessarily do anything with it;
+      the scraper doesn't, anyway. Its most important methods are probably
+      initFromFilenameAndPath(self, filename, path), setMatchAny(self), copy(self),
+      and especially matches(self, other).
+* TQFRdata
+    * A large class that represents the actual contents of a TQFR page. The big
+      difference between it and TQFRpage is whether you want to bother with stripping
+      data out of the tables (sometimes you don't.).
+    * Contains the methods for actually scanning a scraped file and inputting a
+      representation of all the data on the page. 3 of them, actually; sCont, pCont,
+      and nCont, though I should probably get rid of that middle one, I'm not using it
+      like I thought I would. It then sorts this data into a bunch of containers, many
+      of which are or contain...
+* StatObj
+    * A small class that stores a data set of integers or floats plus some statistical
+      information on them and methods for presenting it.
+* ProfessorData
+    * A container class for the 'Instructor Section' part of a TQFR page. TQFRdata
+      stores a list of them, which could have anywhere from 0 (PA16A Cooking Basics)
+      to 16 (CMS300 Research in Computing and Mathematical Sciences) professors (or
+      more, if I find a class with more Instructor Sections...though in fact right now
+      it can't have a 16-professor class, because the filename needed to read it in is
+      above Windows' 260-character path limit. I have some ideas for getting around
+      this without huge restructuring, but given that there is only one respondent to
+      that class, it's not a huge priority.).
+* TAdata
+     * A container class for the 'Teaching Assistant Section' of a TQFR page. TQFRdata
+      stores a list of them, exactly as it does for professors. It would be pretty
+      easy to make it possible to scrape and aggregate by TA; the way the classes are
+      set up, I would mostly just be copying bits of code I wrote for professors and
+      changing some regular expressions and variable names.
 
 ======= TQFRanalyzer.py
 
