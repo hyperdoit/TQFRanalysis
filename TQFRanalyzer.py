@@ -85,7 +85,8 @@ class TQFRanalyzer:
             print f 
             return True
         return False
-                
+    
+    # Possibly should modify these next two functions to allow template compilation, as well, since loading is slower. Could have an argument about load or construct. Use that as the string for the error messages            
     def loadFromTemplate(self, template):
         ''' Loads things that match a TQFRpage template. ONLY looks at what can be learned from the filename, 
         because loading in from data would defeat the point of having this speed up; so TQFRpage, but not TQFRdata.'''
@@ -391,6 +392,7 @@ fullLoad -> constructClaggs -> claggStats or sortClaggs or analyzeClagg"""
         elif choice == "clearClassAggregates" or choice == "clearClaggs":
             self.classAggs = []
             self.classAggsClassNames = []
+            print "Claggs cleared."
         elif choice == "sortClaggs":
             if len(self.classAggs) > 0:
                 print "Legit statNames: "

@@ -121,8 +121,12 @@ def makePrettyTableString(table):
             if len(lines) > rowHeights[rowNum]:
                 rowHeights[rowNum] = len(lines)
             for line in lines:
+                if len(line) > maxCellSize:
+                    print "Line size issue: "
+                    uPrint(line)
                 if len(line) > colSizes[colNum]:
-                    colSizes[colNum] = len(str(row[colNum]))     
+                    colSizes[colNum] = len(line)  
+            
             
             #if isinstance(row[colNum], basestring):
             #    if len(row[colNum]) > colSizes[colNum]:
@@ -166,6 +170,7 @@ def makePrettyTableString(table):
                 rowString += '|'
                 """
             tblString += lineString + "\n"
+    #print colSizes
     return tblString    
     
 def prettyPrintTable(table):

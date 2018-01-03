@@ -213,16 +213,16 @@ def getCSelecOptions():
     analyzer.loadFromTemplate(sT)    
     
     
-def getCSspringElecOptions():
+def getCStermElecOptions(term):
     #templateTQFR(year, term, division, className, professors, departments, numRange, termChar, pracOrAnal)
     #  CS 114+, in 
-    sT = TQFRpage.templateTQFR('ANY', 'SP', 'ANY', 'ANY', 'ANY', ['CS', 'GENERAL'], [114, 1000],  'ANY', '')
+    sT = TQFRpage.templateTQFR('ANY', term, 'ANY', 'ANY', 'ANY', ['CS', 'GENERAL'], [114, 1000],  'ANY', '')
     analyzer.loadFromTemplate(sT)    
     
-getMyPhysElecOptions('SP')
+#getMyPhysElecOptions('SP')
 #getCSelecOptions()
 
-analyzer.compileAllClassAggs()
+#analyzer.compileAllClassAggs()
 
 # DEBUGGING CODE.
 
@@ -336,7 +336,10 @@ def isClaggOffered(clagg):
 
 
 # These important lines!
-#analyzer.classAggs = filter(isClaggOffered, analyzer.classAggs)
-#analyzer.classAggsClassNames = filter(isClassNameOffered, analyzer.classAggsClassNames)
+def removeNonOfferedClaggs():
+    # Not offered in whatever term you loaded the catalog for.
+    analyzer.classAggs = filter(isClaggOffered, analyzer.classAggs)
+    analyzer.classAggsClassNames = filter(isClassNameOffered, analyzer.classAggsClassNames)
+    
 
 
