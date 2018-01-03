@@ -109,7 +109,7 @@ def makePrettyTableString(table):
     for col in range(numCols):
         colSizes.append(0)
     # Find maximum size of each column. Now supporting newlines.
-    maxCellSize = 100 # This should probably be a global setting. It's really only necessary for comments right now.
+    maxCellSize = 110 # This should probably be a global setting. It's really only necessary for comments right now. 110 because that's the max length of the tables ABOVE the comment table.
     #, up to maxCellSize (which possibly should be a setting?) Have decided to trust input for now.
     for rowNum in range(len(table)):
         row = table[rowNum]
